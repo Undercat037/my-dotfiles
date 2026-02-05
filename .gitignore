@@ -1,28 +1,15 @@
-# Existing rules
+# === Приватные данные ===
 .config/youtube/
 .config/vesktop/
-debug_log.txt
-*.log
-*.tmp
-*.bak
-tmp/
-__pycache__/
-*.pyc
-.venv/
-venv/
-*.jpg
-*.png
+.config/discord/sessionData/
+.config/discord/Local Storage/
+.config/Code/User/globalStorage/
+.config/Code/User/workspaceStorage/
 
-# Session files (personal dev data)
-session-*.md
-session-ses_*.md
-
-# Credentials and cookies (NEVER commit)
-yt-cookies.txt
+# Credentials
 *-cookies.txt
 *.cookies
 cookies.txt
-*.netscape-cookies
 .env
 .env.*
 secrets.json
@@ -30,44 +17,68 @@ secrets.json
 *.key
 *.pem
 
-# Скомпилированные файлы
+# === Кеши и временные файлы ===
+*.log
+*.tmp
+*.bak
+*.cache
 *.zwc
+__pycache__/
+*.pyc
+.venv/
+venv/
+tmp/
 
-# Приватные данные
+# VSCode кеши
+.config/Code/Cache/
+.config/Code/CachedData/
+.config/Code/GPUCache/
+.config/Code/Service\ Worker/
+.config/Code/WebStorage/
+.config/Code/DawnCache/
+.config/Code/DawnGraphiteCache/
+.config/Code/DawnWebGPUCache/
+.config/Code/Local\ Storage/
+.config/Code/*.lock
+.config/Code/DIPS*
+.config/Code/User/History/
+
+# Другие приложения - кеши
+.config/*/Cache/
+.config/*/GPUCache/
+.config/*/Service\ Worker/
+.config/*/CacheStorage/
+.config/*/sessionData/
+
+# Логи приложений
+.config/hydralauncher/logs/
+.config/obs-studio/logs/
+.config/musikcube/*.txt
+.config/nchat/log.txt
+
+# Firefox
+.config/mozilla/
+
+# Игровые клиенты
+.config/heroic/
+.config/game-jolt-client/
+.config/equibop/
+
+# Matugen временные
+.config/matugen/templates/
+
+# Quickshell временные
+.config/quickshell/ii/
+
+# Sunshine тесты
+.config/sunshine/tests/
+
+# === История и сессии ===
+.zsh_history
 .ssh/
 .gnupg/
 
-# Кеши
-*.cache
-.zsh_history
-
-# Oh-my-zsh кеши и логи
-.oh-my-zsh/cache/
-.oh-my-zsh/log/
-.oh-my-zsh/**/*.log
-
-# Личные конфиги Discord/Vesktop
-.config/vesktop/
-
-# Hyprland личное
-.config/hypr/hyprland.log
-.config/hypr/hyprland.conf.old
-
-# Kitty sessions и кеш
-.config/kitty/sessions/
-
-# Fastfetch кеш
-.config/fastfetch/cache/
-
-# Rofi истории
-.config/rofi/history/
-.config/rofi/*.rasi.bak
-
-# Временные и служебные файлы
-*.txt
-!readme.md
+# === Разрешить важные файлы ===
 !README.md
-status.txt
-.config/waybar/scripts/user-data.json
-
-.git/
+!readme.md
+!.gitignore

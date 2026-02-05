@@ -1,0 +1,92 @@
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .config/Code/Cache/Cache_Data/6b8ac1b42458a919_0
+	modified:   .config/Code/Cache/Cache_Data/90000419f3a4fafe_0
+	modified:   .config/Code/Cache/Cache_Data/9f50bddbd978eddd_0
+	modified:   .config/Code/Cache/Cache_Data/d121e2a6335b7510_0
+	modified:   .config/Code/Cache/Cache_Data/index-dir/the-real-index
+	modified:   .config/Code/CachedData/c9d77990917f3102ada88be140d28b038d1dd7c7/chrome/js/index-dir/the-real-index
+	new file:   .config/Code/DIPS-wal
+	modified:   .config/Code/DawnGraphiteCache/index
+	modified:   .config/Code/DawnWebGPUCache/index
+	modified:   .config/Code/GPUCache/index
+	modified:   .config/Code/Local Storage/leveldb/LOG
+	modified:   .config/Code/Local Storage/leveldb/LOG.old
+	modified:   .config/Code/Service Worker/Database/LOG
+	modified:   .config/Code/Service Worker/Database/LOG.old
+	new file:   .config/Code/User/History/-310db6d7/ZYDg
+	new file:   .config/Code/User/History/12e241c3/LClO.txt
+	new file:   .config/Code/User/History/12e241c3/R6MJ.txt
+	new file:   .config/Code/User/History/12e241c3/Zk3N.txt
+	new file:   .config/Code/User/History/12e241c3/d5QW.txt
+	new file:   .config/Code/User/History/12e241c3/obOb.txt
+	new file:   .config/Code/User/History/12e241c3/pFaH.txt
+	new file:   .config/Code/User/History/68e58bcc/0ydF.txt
+	new file:   .config/Code/User/History/68e58bcc/NOhM.txt
+	new file:   .config/Code/User/History/68e58bcc/ReY1.txt
+	new file:   .config/Code/User/History/68e58bcc/paVM.txt
+	new file:   .config/Code/User/History/68e58bcc/waYG.txt
+	modified:   .config/Code/User/globalStorage/state.vscdb
+	modified:   .config/Code/User/globalStorage/storage.json
+	deleted:    .config/Code/User/workspaceStorage/1770327222013/state.vscdb.backup
+	renamed:    .config/Code/User/workspaceStorage/1770327222013/state.vscdb -> .config/Code/User/workspaceStorage/1770328069194/state.vscdb
+	new file:   .config/Code/WebStorage/1/CacheStorage/index.txt
+	new file:   .config/Code/WebStorage/2/CacheStorage/index.txt
+	new file:   .config/Code/code.lock
+	new file:   .config/Youtube/Service Worker/CacheStorage/379f1cbab5b08b6fc9e08681e42d8be311441c88/index.txt
+	new file:   .config/discord/Service Worker/CacheStorage/63fc7e4cfcc88165b53fe27bdbf48bdde7611b44/index.txt
+	new file:   .config/equibop/sessionData/Service Worker/CacheStorage/7d571773fef4871f82ca0457379cf2a39317562f/index.txt
+	new file:   .config/fastfetch/arch.txt
+	new file:   .config/game-jolt-client/chrome_shutdown_ms.txt
+	new file:   .config/heroic/Partitions/epicstore/Service Worker/CacheStorage/1182b646fe1b7c2fb535f6df1b863e7a17f43db5/index.txt
+	new file:   .config/hydralauncher/logs/achievements.txt
+	new file:   .config/hydralauncher/logs/error.txt
+	new file:   .config/hydralauncher/logs/info.txt
+	new file:   .config/hydralauncher/logs/logs.txt
+	new file:   .config/hydralauncher/logs/network.old.txt
+	new file:   .config/hydralauncher/logs/network.txt
+	new file:   .config/hydralauncher/logs/pythonrpc.old.txt
+	new file:   .config/hydralauncher/logs/pythonrpc.txt
+	new file:   .config/matugen/templates/kde/color.txt
+	new file:   .config/matugen/templates/wallpaper.txt
+	new file:   .config/mozilla/firefox/b82jg7f1.default-release/datareporting/glean/client_id.txt
+	new file:   .config/mozilla/firefox/b82jg7f1.default-release/pkcs11.txt
+	new file:   .config/mozilla/firefox/b82jg7f1.default-release/serviceworker.txt
+	new file:   .config/musikcube/log.txt
+	new file:   .config/musikcube/stderr.txt
+	new file:   .config/nchat/log.txt
+	new file:   .config/obs-studio/logs/2026-01-15 22-57-20.txt
+	new file:   .config/obs-studio/logs/2026-01-22 23-23-17.txt
+	new file:   .config/obs-studio/logs/2026-01-22 23-25-43.txt
+	new file:   .config/obs-studio/logs/2026-01-23 13-45-01.txt
+	new file:   .config/obs-studio/logs/2026-01-25 05-06-44.txt
+	new file:   .config/obs-studio/logs/2026-01-25 05-09-00.txt
+	new file:   .config/obs-studio/logs/2026-01-25 05-09-17.txt
+	new file:   .config/obs-studio/logs/2026-01-31 23-35-46.txt
+	new file:   .config/obs-studio/logs/2026-02-03 13-57-55.txt
+	new file:   .config/obs-studio/logs/2026-02-05 09-51-03.txt
+	new file:   .config/quickshell/ii/defaults/matugen/templates/kde/color.txt
+	new file:   .config/quickshell/ii/defaults/matugen/templates/wallpaper.txt
+	new file:   .config/quickshell/ii/dots/.config/matugen/templates/kde/color.txt
+	new file:   .config/quickshell/ii/dots/.config/matugen/templates/wallpaper.txt
+	new file:   .config/quickshell/ii/scripts/cava/raw_output_config.txt
+	new file:   .config/quickshell/ii/scripts/colors/terminal/sequences.txt
+	new file:   .config/quickshell/ii/sdata/uv/requirements.txt
+	new file:   .config/sunshine/tests/hello-redirect.txt
+	new file:   .config/sunshine/tests/hello.txt
+	new file:   .config/waybar/nerd-icons-parsed.txt
+	modified:   .gitignore
+	new file:   .oh-my-zsh/LICENSE.txt
+	new file:   .oh-my-zsh/plugins/emoji/emoji-data.txt
+	new file:   .oh-my-zsh/plugins/golang/templates/package.txt
+	new file:   .oh-my-zsh/plugins/golang/templates/search.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .config/Code/Cache/Cache_Data/index-dir/the-real-index
+	modified:   .config/Code/DawnGraphiteCache/data_1
+	modified:   .config/Code/DawnWebGPUCache/data_1
+	modified:   .config/Code/GPUCache/data_1
+
