@@ -1,0 +1,12 @@
+[StreamInputs]
+inputDevice=bluez_input.B8:17:43:24:47:BC
+
+[StreamOutputs]
+outputDevice=bluez_output.B8_17_43_24_47_BC.1
+plugins=autogain#0
+visiblePage=pluginsPage
+visiblePlugin=autogain#0
+
+[Window]
+height=1004
+width=1914

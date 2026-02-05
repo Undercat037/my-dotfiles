@@ -1,0 +1,1379 @@
+{
+	"library": [
+		{
+			"app_name": "39700e23ec114d7581aedea23779ce2d",
+			"art_cover": "https://cdn1.epicgames.com/spt-assets/0b1283e5bfa64ad48f3862b79abc20b9/bendy-and-the-ink-machine-1tw1e.png",
+			"art_square": "https://cdn1.epicgames.com/spt-assets/0b1283e5bfa64ad48f3862b79abc20b9/bendy-and-the-ink-machine-b7j9w.png",
+			"cloud_save_enabled": true,
+			"developer": "Joey Drew Studios Inc.",
+			"extra": {
+				"about": {
+					"description": "Bendy and the Ink Machine® — моторошний бойовик-головоломка від першої особи, який назавжди зруйнує ваше дитяче захоплення мультфільмами.",
+					"shortDescription": ""
+				},
+				"reqs": [],
+				"storeUrl": "https://www.epicgames.com/store/product/bendy-and-the-ink-machine"
+			},
+			"folder_name": "BendyandtheInkMachine",
+			"install": {
+				"install_size": "0",
+				"is_dlc": false
+			},
+			"is_installed": false,
+			"namespace": "4ebf21b7761e40cdb180d0604127e4a6",
+			"is_mac_native": false,
+			"save_folder": "{AppData}/../LocalLow/Joey Drew Studios/Bendy and the Ink Machine/Saves/",
+			"title": "Bendy and the Ink Machine",
+			"canRunOffline": false,
+			"isEAManaged": false,
+			"is_linux_native": false,
+			"runner": "legendary",
+			"store_url": "https://www.epicgames.com/store/product/bendy-and-the-ink-machine"
+		},
+		{
+			"app_name": "602eb4abc8764c87b7f2607a1ef8c18e",
+			"art_cover": "https://cdn1.epicgames.com/item/cbd5b3d310a54b12bf3fe8c41994174f/EGS_VALORANT_RiotGames_S1_2560x1440-892482f9cbec5827c7c4989d7feb2bf1",
+			"art_square": "https://cdn1.epicgames.com/item/cbd5b3d310a54b12bf3fe8c41994174f/EGS_VALORANT_RiotGames_S2_1200x1600-4c5338a8b14b8da8d45bd57298128673",
+			"cloud_save_enabled": false,
+			"developer": "Riot Games, Inc.",
+			"extra": {
+				"about": {
+					"description": "VALORANT",
+					"shortDescription": ""
+				},
+				"reqs": [],
+				"storeUrl": "https://www.epicgames.com/store/product/valorant"
+			},
+			"folder_name": "VALORANT",
+			"install": {
+				"install_size": "0",
+				"is_dlc": false
+			},
+			"is_installed": false,
+			"namespace": "cbd5b3d310a54b12bf3fe8c41994174f",
+			"is_mac_native": false,
+			"save_folder": "",
+			"title": "VALORANT",
+			"canRunOffline": true,
+			"isEAManaged": false,
+			"is_linux_native": false,
+			"runner": "legendary",
+			"store_url": "https://www.epicgames.com/store/product/valorant"
+		},
+		{
+			"app_name": "Fortnite",
+			"art_cover": "https://cdn1.epicgames.com/item/fn/FNBR_39-00_C7S1_EGS_Launcher_DarkVoyager_FN_Blade_2560x1440_2560x1440-f240b7a1027b6897a9b505afdd35c122",
+			"art_square": "https://cdn1.epicgames.com/item/fn/FNBR_39-00_C7S1_EGS_Launcher_DarkVoyager_FN_Blade_1200x1600_1200x1600-127107447c05fa1fae4e2e8ba30fa258",
+			"cloud_save_enabled": false,
+			"developer": "Epic Games",
+			"extra": {
+				"about": {
+					"description": "Грайте у Fortnite по-своєму. \n\nСтаньте останнім уцілілим гравцем у режимах «Королівська битва», «Нульова висота», «Перезарядка» і Fortnite OG, досліджуйте вражаючий світ LEGO Fortnite, женіть до фінішної лінії у Rocket Racing або очольте концерт на Fortnite Festival. Грайте разом із друзями на тисячах безплатних авторських островів у режимах Deathrun, Tycoon, Racing, Zombie Survival та інших! Приєднайтеся до спільноти авторів і створіть власний острів разом із Unreal Editor для Fortnite (UEFN) або інструментами творчого режиму Fortnite.\n\nКожен острів у Fortnite має власний віковий рейтинг, і тому завжди можна знайти саме той, який підійде вам і вашим друзям. Знайдіть все це у Fortnite!",
+					"shortDescription": ""
+				},
+				"reqs": [],
+				"storeUrl": "https://www.epicgames.com/store/product/fortnite"
+			},
+			"dlcList": [
+				{
+					"ageGatings": {},
+					"applicationId": "",
+					"categories": [
+						{
+							"path": "addons/launchable"
+						},
+						{
+							"path": "addons"
+						},
+						{
+							"path": "applications"
+						}
+					],
+					"creationDate": "2023-02-24T22:47:11.016Z",
+					"customAttributes": {
+						"AdditionalCommandLine": {
+							"type": "STRING",
+							"value": "-epicapp=Fortnite -IslandOverride=set_br_playlists"
+						}
+					},
+					"description": "Fortnite Battle Royale",
+					"developer": "Epic Games",
+					"developerId": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
+					"endOfSupport": false,
+					"entitlementName": "d75daf91c89b49ecb110b69a7bd68996",
+					"entitlementType": "ENTITLEMENT",
+					"eulaIds": [],
+					"id": "d75daf91c89b49ecb110b69a7bd68996",
+					"itemType": "DURABLE",
+					"keyImages": [
+						{
+							"height": 1440,
+							"md5": "30b55c68d2a05184460f9c0fad95bae5",
+							"size": 675676,
+							"type": "DieselGameBox",
+							"uploadedDate": "2025-02-17T21:24:07.369Z",
+							"url": "https://cdn1.epicgames.com/item/fn/FNBR_34-00_C6S2_EGS_Launcher_KeyArt_Blade_2560x1440_2560x1440-30b55c68d2a05184460f9c0fad95bae5",
+							"width": 2560
+						},
+						{
+							"height": 1600,
+							"md5": "114eab64d15efa8a5413d8679692ac69",
+							"size": 524914,
+							"type": "DieselGameBoxTall",
+							"uploadedDate": "2025-02-17T21:24:15.178Z",
+							"url": "https://cdn1.epicgames.com/item/fn/FNBR_34-00_C6S2_EGS_Launcher_KeyArt_Blade_1200x1600_1200x1600-114eab64d15efa8a5413d8679692ac69",
+							"width": 1200
+						}
+					],
+					"lastModifiedDate": "2025-04-11T18:12:15.487Z",
+					"mainGameItem": {
+						"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+						"namespace": "fn",
+						"unsearchable": false
+					},
+					"mainGameItemList": [
+						{
+							"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+							"namespace": "fn",
+							"unsearchable": false
+						}
+					],
+					"namespace": "fn",
+					"releaseInfo": [
+						{
+							"appId": "afdb5a85efcc45d8ae8e406e2121d81c",
+							"compatibleApps": [],
+							"dateAdded": "2023-03-14T17:27:41.306Z",
+							"id": "a1a774fdd85c4e0dbf99d5379a8dd608",
+							"platform": [
+								"Windows"
+							]
+						}
+					],
+					"requiresSecureAccount": false,
+					"status": "ACTIVE",
+					"title": "Fortnite Battle Royale",
+					"unsearchable": true
+				},
+				{
+					"ageGatings": {
+						"ACB": {
+							"ageControl": 0,
+							"descriptor": "General,Online Interactivity,In-Game Purchases",
+							"descriptorIds": [
+								196,
+								198,
+								964
+							],
+							"elementIds": [],
+							"gameRating": "General",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/ACB_G_192_192x192-7b943fb85a42a888515791340eff2366",
+							"ratingSystem": "ACB",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/AUS-G_530x530-8de1de50350653f6bf4b2a55fbc1fa05",
+							"title": "General"
+						},
+						"CERO": {
+							"ageControl": 0,
+							"descriptorIds": [],
+							"elementIds": [],
+							"gameRating": "全年齢対象",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/cero_a_208x256-0a7bc37aeba34b1c641c1f3812fcf7d1",
+							"ratingSystem": "CERO",
+							"title": "全年齢対象"
+						},
+						"ClassInd": {
+							"ageControl": 0,
+							"descriptorIds": [],
+							"element": "Usuários Interagem,Compras on-line (Inclui itens aleatórios)",
+							"elementIds": [
+								11,
+								23
+							],
+							"gameRating": "Livre",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/ClassInd_L_192_192x192-aa1269028601dc012f85035c1d7d7051",
+							"ratingSystem": "ClassInd",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/CLASSIND-L_530x530-c5b29e0ece4d40ec2f4ebea341c60e23",
+							"title": "Livre"
+						},
+						"ESRB": {
+							"ageControl": 0,
+							"descriptorIds": [],
+							"element": "Users Interact,In-Game Purchases",
+							"elementIds": [
+								11,
+								21
+							],
+							"gameRating": "Everyone",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/ESRB_E_192_192x192-d19524ed4facfee97d7372b6e5cd51f8",
+							"ratingSystem": "ESRB",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/ESRB-EN-E_354x530-77d61f8b877ae9687a4a40985a5f0105",
+							"title": "Everyone"
+						},
+						"GRAC": {
+							"ageControl": 0,
+							"descriptorIds": [],
+							"elementIds": [],
+							"gameRating": "전체이용가",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/GRAC_All_192_192x192-0973b9b3768114fdfa4d864efd697ae2",
+							"ratingSystem": "GRAC",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/GRAC-ALL_396x530-56fd85544364d3eab30fe93ed24e9394",
+							"title": "전체이용가"
+						},
+						"OFLC": {
+							"ageControl": 0,
+							"elementIds": [],
+							"gameRating": "G",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/oflc_g_256x256-764f8356f86a1b98da62bda28b8d2792",
+							"ratingSystem": "OFLC",
+							"title": "G"
+						},
+						"PEGI": {
+							"ageControl": 3,
+							"descriptorIds": [],
+							"element": "In-Game Purchases",
+							"elementIds": [
+								21
+							],
+							"gameRating": "PEGI 3",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/PEGI_3_192_192x192-490b93ddf59fb4ac1148d1eb9083626a",
+							"ratingSystem": "PEGI",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/PEGI-3_435x530-c931ab5bb4eb190f6e8e542081c49dc4",
+							"title": "PEGI 3"
+						},
+						"USK": {
+							"ageControl": 12,
+							"descriptorIds": [],
+							"element": "In-Game-Käufe,Chats",
+							"elementIds": [
+								21,
+								11
+							],
+							"gameRating": "USK ab 12",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/USK_12_192_192x192-656fa1e0a9c59f9495ee94c58ffbebf5",
+							"ratingSystem": "USK",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/USK-12_530x530-dc467955d1aaff843843ee070d83c596",
+							"title": "USK ab 12"
+						}
+					},
+					"applicationId": "",
+					"categories": [
+						{
+							"path": "addons/launchable"
+						},
+						{
+							"path": "addons"
+						},
+						{
+							"path": "applications"
+						}
+					],
+					"creationDate": "2023-11-20T23:38:45.741Z",
+					"customAttributes": {
+						"AdditionalCommandLine": {
+							"type": "STRING",
+							"value": "-epicapp=Fortnite -IslandOverride=set_delmar_mrs_ranked"
+						},
+						"CanRunOffline": {
+							"type": "STRING",
+							"value": "true"
+						}
+					},
+					"description": "Rocket Racing",
+					"developer": "Epic Games",
+					"developerId": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
+					"endOfSupport": false,
+					"entitlementName": "dc0f82460af8457baf3b40e817dcc2b5",
+					"entitlementType": "ENTITLEMENT",
+					"eulaIds": [
+						"epicgames_tos"
+					],
+					"id": "dc0f82460af8457baf3b40e817dcc2b5",
+					"itemType": "DURABLE",
+					"keyImages": [
+						{
+							"height": 1440,
+							"md5": "a9d3c2f38d6fe1670f08bac6af5d6f32",
+							"size": 2047635,
+							"type": "DieselGameBox",
+							"uploadedDate": "2024-10-11T14:54:12.694Z",
+							"url": "https://cdn1.epicgames.com/item/fn/EN_28RR_1P_EGS_2560x1440_2560x1440-a9d3c2f38d6fe1670f08bac6af5d6f32",
+							"width": 2560
+						},
+						{
+							"height": 1600,
+							"md5": "916d6c983e085304b8a7964a9d443092",
+							"size": 1236904,
+							"type": "DieselGameBoxTall",
+							"uploadedDate": "2024-10-11T14:54:19.076Z",
+							"url": "https://cdn1.epicgames.com/item/fn/EN_28RR_1P_EGS_1200x1600_thumb_1200x1600-916d6c983e085304b8a7964a9d443092",
+							"width": 1200
+						}
+					],
+					"lastModifiedDate": "2025-11-29T21:36:07.449Z",
+					"mainGameItem": {
+						"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+						"namespace": "fn",
+						"unsearchable": false
+					},
+					"mainGameItemList": [
+						{
+							"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+							"namespace": "fn",
+							"unsearchable": false
+						}
+					],
+					"namespace": "fn",
+					"releaseInfo": [
+						{
+							"appId": "5291abb43ba449859549cb41535e8c8f",
+							"compatibleApps": [],
+							"dateAdded": "2023-12-06T23:16:00.000Z",
+							"id": "6e09ed659c0c42c3986751f9ecb50bfa",
+							"platform": [
+								"Windows",
+								"iOS",
+								"Android"
+							]
+						}
+					],
+					"requiresSecureAccount": false,
+					"status": "ACTIVE",
+					"title": "Rocket Racing",
+					"unsearchable": true
+				},
+				{
+					"ageGatings": {
+						"ACB": {
+							"ageControl": 15,
+							"descriptor": "Mild Drug References,Sexual References,Online Interactivity,In-Game Purchases",
+							"descriptorIds": [
+								163,
+								149,
+								198,
+								964
+							],
+							"elementIds": [],
+							"gameRating": "Parental guidance",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/ACB_PG_192_192x192-e0cb71e555d104463b8cb6ace89895d9",
+							"ratingSystem": "ACB",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/AUS-PG_530x530-b3b0143b27b1e3837cca000e7d5f2912",
+							"title": "Parental guidance"
+						},
+						"CERO": {
+							"ageControl": 12,
+							"descriptorIds": [],
+							"elementIds": [],
+							"gameRating": "12歳以上対象",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/cero_b_208x256-65b61e49ae62c43559b290c6f1ce87eb",
+							"ratingSystem": "CERO",
+							"title": "12歳以上対象"
+						},
+						"ClassInd": {
+							"ageControl": 12,
+							"descriptor": "Violência,Conteúdo Sexual,Linguagem Imprópria",
+							"descriptorIds": [
+								60,
+								62,
+								69
+							],
+							"element": "Usuários Interagem,Compras on-line (Inclui itens aleatórios)",
+							"elementIds": [
+								11,
+								23
+							],
+							"gameRating": "12 anos",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/ClassInd_12_192_192x192-74a171f6c8e7f9ee5d7583241d68d081",
+							"ratingSystem": "ClassInd",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/CLASSIND-12_530x530-7f499e56148e56d5e17b6b6c18b854cd",
+							"title": "12 anos"
+						},
+						"ESRB": {
+							"ageControl": 13,
+							"descriptor": "Lyrics",
+							"descriptorIds": [
+								217
+							],
+							"element": "Users Interact,In-Game Purchases",
+							"elementIds": [
+								11,
+								21
+							],
+							"gameRating": "Teen",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/ESRB_T_192_192x192-a0885066a34083cd647dc10db21717f1",
+							"ratingSystem": "ESRB",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/ESRB-EN-T_354x530-baae04c009da6ffc5139341c31182e67",
+							"title": "Teen"
+						},
+						"GRAC": {
+							"ageControl": 0,
+							"descriptorIds": [],
+							"elementIds": [],
+							"gameRating": "전체이용가",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/GRAC_All_192_192x192-0973b9b3768114fdfa4d864efd697ae2",
+							"ratingSystem": "GRAC",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/GRAC-ALL_396x530-56fd85544364d3eab30fe93ed24e9394",
+							"title": "전체이용가"
+						},
+						"OFLC": {
+							"ageControl": 8,
+							"elementIds": [],
+							"gameRating": "PG",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/oflc_pg_256x256-ba3755202c132b84708dadf34e17b930",
+							"ratingSystem": "OFLC",
+							"title": "PG"
+						},
+						"PEGI": {
+							"ageControl": 12,
+							"descriptor": "Bad Language,Sex,In-Game Purchases",
+							"descriptorIds": [
+								890,
+								54,
+								895
+							],
+							"elementIds": [],
+							"gameRating": "PEGI 12",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/PEGI_12_192_192x192-afa4df43f131bc83eb380ccf22f8d904",
+							"ratingSystem": "PEGI",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/PEGI-12_436x530-0cd1f06607086f3cc1bc2b8643f21b0a",
+							"title": "PEGI 12"
+						},
+						"USK": {
+							"ageControl": 12,
+							"descriptorIds": [],
+							"element": "In-Game-Käufe,Chats",
+							"elementIds": [
+								21,
+								11
+							],
+							"gameRating": "USK ab 12",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/USK_12_192_192x192-656fa1e0a9c59f9495ee94c58ffbebf5",
+							"ratingSystem": "USK",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/USK-12_530x530-dc467955d1aaff843843ee070d83c596",
+							"title": "USK ab 12"
+						}
+					},
+					"applicationId": "",
+					"categories": [
+						{
+							"path": "addons/launchable"
+						},
+						{
+							"path": "addons"
+						},
+						{
+							"path": "applications"
+						}
+					],
+					"creationDate": "2023-11-20T23:39:05.921Z",
+					"customAttributes": {
+						"AdditionalCommandLine": {
+							"type": "STRING",
+							"value": "-epicapp=Fortnite -IslandOverride=playlist_pilgrimquickplay"
+						},
+						"CanRunOffline": {
+							"type": "STRING",
+							"value": "true"
+						}
+					},
+					"description": "Fortnite Festival",
+					"developer": "Epic Games",
+					"developerId": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
+					"endOfSupport": false,
+					"entitlementName": "7f17fff066664078ba6a244f4b31644f",
+					"entitlementType": "ENTITLEMENT",
+					"eulaIds": [
+						"epicgames_tos"
+					],
+					"id": "7f17fff066664078ba6a244f4b31644f",
+					"itemType": "DURABLE",
+					"keyImages": [
+						{
+							"height": 1600,
+							"md5": "8d852a4faeadf20bf5361773c9c6c9ba",
+							"size": 474773,
+							"type": "DieselGameBoxTall",
+							"uploadedDate": "2025-11-22T00:21:46.215Z",
+							"url": "https://cdn1.epicgames.com/item/fn/FNSP_39-00_ChimeCurl_EGS_Blades_1200x1600_1200x1600-8d852a4faeadf20bf5361773c9c6c9ba",
+							"width": 1200
+						},
+						{
+							"height": 1440,
+							"md5": "431dba8fcdb7f41cf077809080260ea7",
+							"size": 831701,
+							"type": "DieselGameBox",
+							"uploadedDate": "2025-11-22T00:21:52.725Z",
+							"url": "https://cdn1.epicgames.com/item/fn/FNSP_39-00_ChimeCurl_EGS_Blades_2560x1440_2560x1440-431dba8fcdb7f41cf077809080260ea7",
+							"width": 2560
+						}
+					],
+					"lastModifiedDate": "2025-11-29T19:44:44.454Z",
+					"mainGameItem": {
+						"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+						"namespace": "fn",
+						"unsearchable": false
+					},
+					"mainGameItemList": [
+						{
+							"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+							"namespace": "fn",
+							"unsearchable": false
+						}
+					],
+					"namespace": "fn",
+					"releaseInfo": [
+						{
+							"appId": "09e442f830a341f698b4da42abd98c9b",
+							"compatibleApps": [],
+							"dateAdded": "2023-12-06T23:24:00.000Z",
+							"id": "33204d8fa8a04c229e7712127e8fa49f",
+							"platform": [
+								"Windows",
+								"iOS",
+								"Android"
+							]
+						}
+					],
+					"requiresSecureAccount": false,
+					"status": "ACTIVE",
+					"title": "Fortnite Festival",
+					"unsearchable": true
+				},
+				{
+					"ageGatings": {
+						"ACB": {
+							"ageControl": 15,
+							"descriptor": "Mild Violence,Online Interactivity,In-Game Purchases",
+							"descriptorIds": [
+								140,
+								198,
+								964
+							],
+							"elementIds": [],
+							"gameRating": "Parental guidance",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/ACB_PG_192_192x192-e0cb71e555d104463b8cb6ace89895d9",
+							"ratingSystem": "ACB",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/AUS-PG_530x530-b3b0143b27b1e3837cca000e7d5f2912",
+							"title": "Parental guidance"
+						},
+						"CERO": {
+							"ageControl": 0,
+							"descriptorIds": [],
+							"elementIds": [],
+							"gameRating": "全年齢対象",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/cero_a_208x256-0a7bc37aeba34b1c641c1f3812fcf7d1",
+							"ratingSystem": "CERO",
+							"title": "全年齢対象"
+						},
+						"ClassInd": {
+							"ageControl": 10,
+							"descriptor": "Violência",
+							"descriptorIds": [
+								60
+							],
+							"element": "Usuários Interagem,Compras on-line (Inclui itens aleatórios)",
+							"elementIds": [
+								11,
+								23
+							],
+							"gameRating": "10 anos",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/ClassInd_10_192_192x192-a212678a1fe969ab23f35930abfb75c1",
+							"ratingSystem": "ClassInd",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/CLASSIND-10_530x530-2e90e467e1a24e63b4fd4804ca9e7931",
+							"title": "10 anos"
+						},
+						"ESRB": {
+							"ageControl": 10,
+							"descriptor": "Fantasy Violence",
+							"descriptorIds": [
+								8
+							],
+							"element": "Users Interact,In-Game Purchases",
+							"elementIds": [
+								11,
+								21
+							],
+							"gameRating": "Everyone 10+",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/ESRB_E10_192_192x192-a046506419451571f45dad71361cf56d",
+							"ratingSystem": "ESRB",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/ESRB-EN-E10_354x530-75085475e398dc8aa8b84fa7040f6119",
+							"title": "Everyone 10+"
+						},
+						"GRAC": {
+							"ageControl": 12,
+							"descriptor": "폭력성",
+							"descriptorIds": [
+								440
+							],
+							"elementIds": [],
+							"gameRating": "12세이용가",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/GRAC_12_192_192x192-2873c81e2512ccd4d3fb02a00458ab19",
+							"ratingSystem": "GRAC",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/GRAC-12_397x530-84396e7355c346dd8875a2f9afdfce89",
+							"title": "12세이용가"
+						},
+						"OFLC": {
+							"ageControl": 8,
+							"elementIds": [],
+							"gameRating": "PG",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/oflc_pg_256x256-ba3755202c132b84708dadf34e17b930",
+							"ratingSystem": "OFLC",
+							"title": "PG"
+						},
+						"PEGI": {
+							"ageControl": 7,
+							"descriptor": "Violence,In-Game Purchases",
+							"descriptorIds": [
+								51,
+								895
+							],
+							"elementIds": [],
+							"gameRating": "PEGI 7",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/PEGI_7_192_192x192-30e2e712d0682dad01add90a6ccbed5b",
+							"ratingSystem": "PEGI",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/PEGI-7_435x530-9439a136999d3dd762c7a61c3b8c7683",
+							"title": "PEGI 7"
+						},
+						"USK": {
+							"ageControl": 12,
+							"descriptorIds": [],
+							"elementIds": [],
+							"gameRating": "USK ab 12",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/USK_12_192_192x192-656fa1e0a9c59f9495ee94c58ffbebf5",
+							"ratingSystem": "USK",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/USK-12_530x530-dc467955d1aaff843843ee070d83c596",
+							"title": "USK ab 12"
+						}
+					},
+					"applicationId": "",
+					"categories": [
+						{
+							"path": "addons/launchable"
+						},
+						{
+							"path": "addons"
+						},
+						{
+							"path": "applications"
+						}
+					],
+					"creationDate": "2023-11-10T23:43:38.326Z",
+					"customAttributes": {
+						"AdditionalCommandLine": {
+							"type": "STRING",
+							"value": "-epicapp=Fortnite -IslandOverride=playlist_juno"
+						}
+					},
+					"description": "LEGO® Fortnite®",
+					"developer": "Epic Games",
+					"developerId": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
+					"endOfSupport": false,
+					"entitlementName": "8f33cce63b3f4a46aca59ff8c85ff1cd",
+					"entitlementType": "ENTITLEMENT",
+					"eulaIds": [
+						"epicgames_tos"
+					],
+					"id": "8f33cce63b3f4a46aca59ff8c85ff1cd",
+					"itemType": "DURABLE",
+					"keyImages": [
+						{
+							"height": 1440,
+							"md5": "7fe29ccae709fe851821433f56f3ef70",
+							"size": 976142,
+							"type": "DieselGameBox",
+							"uploadedDate": "2024-09-11T22:06:05.868Z",
+							"url": "https://cdn1.epicgames.com/item/fn/FNJN_31-20_Lost-Isles_EGS_Launcher_KeyArt_Blade_2560x1440_2560x1440-7fe29ccae709fe851821433f56f3ef70",
+							"width": 2560
+						},
+						{
+							"height": 1600,
+							"md5": "d6a9ec2c3bd47521206d7b1708c6824d",
+							"size": 377030,
+							"type": "DieselGameBoxTall",
+							"uploadedDate": "2024-09-11T22:06:12.573Z",
+							"url": "https://cdn1.epicgames.com/item/fn/FNJN_31-20_Lost-Isles_EGS_Launcher_KeyArt_Blade_1200x1600_1200x1600-d6a9ec2c3bd47521206d7b1708c6824d",
+							"width": 1200
+						}
+					],
+					"lastModifiedDate": "2025-11-29T21:35:24.684Z",
+					"mainGameItem": {
+						"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+						"namespace": "fn",
+						"unsearchable": false
+					},
+					"mainGameItemList": [
+						{
+							"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+							"namespace": "fn",
+							"unsearchable": false
+						}
+					],
+					"namespace": "fn",
+					"releaseInfo": [
+						{
+							"appId": "d8f7763e07d74c209d760a679f9ed6ac",
+							"compatibleApps": [],
+							"dateAdded": "2023-12-06T23:13:00.000Z",
+							"id": "ff932a2d29144640ad1a8ac3aa607dc8",
+							"platform": [
+								"Windows",
+								"iOS",
+								"Android"
+							]
+						}
+					],
+					"requiresSecureAccount": false,
+					"status": "ACTIVE",
+					"title": "LEGO® Fortnite®",
+					"unsearchable": true
+				},
+				{
+					"ageGatings": {},
+					"applicationId": "",
+					"categories": [
+						{
+							"path": "addons/launchable"
+						},
+						{
+							"path": "software"
+						},
+						{
+							"path": "addons"
+						},
+						{
+							"path": "applications"
+						}
+					],
+					"creationDate": "2021-08-04T22:15:10.018Z",
+					"customAttributes": {
+						"AdditionalCommandLine": {
+							"type": "STRING",
+							"value": "-epicapp=Fortnite"
+						},
+						"CanSkipCabinedWarning": {
+							"type": "STRING",
+							"value": "true"
+						},
+						"CanSkipKoreanIdVerification": {
+							"type": "STRING",
+							"value": "true"
+						},
+						"DlcProcessNames": {
+							"type": "STRING",
+							"value": "UnrealEditorFortnite-Win64-Shipping.exe,CrashReportClientEditor.exe,urc.exe"
+						},
+						"IgnoreMainGameGateKeeper": {
+							"type": "STRING",
+							"value": "true"
+						}
+					},
+					"description": "Unreal Editor for Fortnite",
+					"developer": "Epic Games",
+					"developerId": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
+					"endOfSupport": false,
+					"entitlementName": "1e8bda5cfbb641b9a9aea8bd62285f73",
+					"entitlementType": "EXECUTABLE",
+					"eulaIds": [
+						"uefn && emporium"
+					],
+					"id": "1e8bda5cfbb641b9a9aea8bd62285f73",
+					"itemType": "DURABLE",
+					"keyImages": [
+						{
+							"height": 1440,
+							"md5": "bc992b49496068f859100ec4cc6e0f3c",
+							"size": 605897,
+							"type": "DieselGameBox",
+							"uploadedDate": "2024-03-20T17:20:56.037Z",
+							"url": "https://cdn1.epicgames.com/item/fn/UEFN_29-01_EGS_UEFN_Assets_S1OfferImage_2560x1440_2560x1440-bc992b49496068f859100ec4cc6e0f3c",
+							"width": 2560
+						},
+						{
+							"height": 1600,
+							"md5": "ad0410dce2ef92f4dca09bcb63056be4",
+							"size": 313973,
+							"type": "DieselGameBoxTall",
+							"uploadedDate": "2024-03-20T17:20:59.316Z",
+							"url": "https://cdn1.epicgames.com/item/fn/UEFN_29-01_EGS_UEFN_Assets_S2OfferImage_1200x1600_1200x1600-ad0410dce2ef92f4dca09bcb63056be4",
+							"width": 1200
+						}
+					],
+					"lastModifiedDate": "2025-08-01T17:13:37.175Z",
+					"mainGameItem": {
+						"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+						"namespace": "fn",
+						"unsearchable": false
+					},
+					"mainGameItemList": [
+						{
+							"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+							"namespace": "fn",
+							"unsearchable": false
+						}
+					],
+					"namespace": "fn",
+					"releaseInfo": [
+						{
+							"appId": "Fortnite_Studio",
+							"compatibleApps": [],
+							"dateAdded": "2023-03-10T16:11:34.775Z",
+							"id": "58bd32e303844c90842d28480a6786ae",
+							"platform": [
+								"Windows"
+							]
+						}
+					],
+					"requiresSecureAccount": false,
+					"status": "ACTIVE",
+					"title": "Unreal Editor for Fortnite",
+					"unsearchable": true
+				},
+				{
+					"ageGatings": {},
+					"applicationId": "",
+					"categories": [
+						{
+							"path": "addons/launchable"
+						},
+						{
+							"path": "addons"
+						},
+						{
+							"path": "applications"
+						}
+					],
+					"creationDate": "2024-08-05T20:23:37.201Z",
+					"customAttributes": {
+						"AdditionalCommandLine": {
+							"type": "STRING",
+							"value": "-epicapp=Fortnite -IslandOverride=set_blastberry_playlists"
+						},
+						"CanRunOffline": {
+							"type": "STRING",
+							"value": "true"
+						}
+					},
+					"description": "Fortnite Reload",
+					"developer": "Epic Games",
+					"developerId": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
+					"endOfSupport": false,
+					"entitlementName": "e86c48dd240e41bc9565c6b6b16a9ec1",
+					"entitlementType": "ENTITLEMENT",
+					"eulaIds": [
+						"epicgames_tos"
+					],
+					"id": "e86c48dd240e41bc9565c6b6b16a9ec1",
+					"itemType": "DURABLE",
+					"keyImages": [
+						{
+							"height": 1600,
+							"md5": "ae1b7e83e818ae65dfc404af06897a75",
+							"size": 1544082,
+							"type": "DieselGameBoxTall",
+							"uploadedDate": "2025-10-10T14:31:57.357Z",
+							"url": "https://cdn1.epicgames.com/item/fn/EN_FNBR_37-30_Reload_Nitemare_EGS_Launcher_KeyArt_Blade_1200x1600_1200x1600-ae1b7e83e818ae65dfc404af06897a75",
+							"width": 1200
+						},
+						{
+							"height": 1440,
+							"md5": "99c7c508b6bad904a53f301615e481b9",
+							"size": 634596,
+							"type": "DieselGameBox",
+							"uploadedDate": "2025-10-10T14:32:00.635Z",
+							"url": "https://cdn1.epicgames.com/item/fn/EN_FNBR_37-30_Reload_Nitemare_EGS_Launcher_KeyArt_Blade_2560x1440_2560x1440-99c7c508b6bad904a53f301615e481b9",
+							"width": 2560
+						}
+					],
+					"lastModifiedDate": "2025-11-29T21:31:39.136Z",
+					"mainGameItem": {
+						"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+						"namespace": "fn",
+						"unsearchable": false
+					},
+					"mainGameItemList": [
+						{
+							"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+							"namespace": "fn",
+							"unsearchable": false
+						}
+					],
+					"namespace": "fn",
+					"releaseInfo": [
+						{
+							"appId": "21339bc36b00459aa034300a9a7ad99e",
+							"compatibleApps": [],
+							"dateAdded": "2023-12-06T23:16:00.000Z",
+							"id": "6e09ed659c0c42c3986751f9ecb50bfa",
+							"platform": [
+								"Windows",
+								"iOS",
+								"Android"
+							]
+						}
+					],
+					"requiresSecureAccount": false,
+					"status": "ACTIVE",
+					"title": "Fortnite Reload",
+					"unsearchable": true
+				},
+				{
+					"ageGatings": {},
+					"applicationId": "",
+					"categories": [
+						{
+							"path": "addons/launchable"
+						},
+						{
+							"path": "addons"
+						},
+						{
+							"path": "applications"
+						}
+					],
+					"creationDate": "2024-12-03T22:28:27.073Z",
+					"customAttributes": {
+						"AdditionalCommandLine": {
+							"type": "STRING",
+							"value": "-epicapp=Fortnite -IslandOverride=experience_og"
+						}
+					},
+					"description": "Fortnite OG",
+					"developer": "Epic Games",
+					"developerId": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
+					"endOfSupport": false,
+					"entitlementName": "4e7f14219eff40ffb21d0bcf1d68182a",
+					"entitlementType": "ENTITLEMENT",
+					"eulaIds": [
+						"epicgames_tos"
+					],
+					"id": "4e7f14219eff40ffb21d0bcf1d68182a",
+					"itemType": "DURABLE",
+					"keyImages": [
+						{
+							"height": 1440,
+							"md5": "2d5c00219e6913395413201c3a2e797d",
+							"size": 2599173,
+							"type": "DieselGameBox",
+							"uploadedDate": "2025-09-25T20:20:38.280Z",
+							"url": "https://cdn1.epicgames.com/item/fn/EN_FNFigment_37-00_C1S6_EGS_Launcher_KeyArt_Carousel_PDP_2560x1440_logo_2560x1440-2d5c00219e6913395413201c3a2e797d",
+							"width": 2560
+						},
+						{
+							"height": 1600,
+							"md5": "47bcc2460eec25bf410a71d3449585d2",
+							"size": 1654440,
+							"type": "DieselGameBoxTall",
+							"uploadedDate": "2025-09-25T20:23:40.903Z",
+							"url": "https://cdn1.epicgames.com/item/fn/EN_FNFigment_37-00_C1S6_EGS_Launcher_KeyArt_Blade_1200x1600_1200x1600-47bcc2460eec25bf410a71d3449585d2",
+							"width": 1200
+						}
+					],
+					"lastModifiedDate": "2025-11-29T21:33:07.388Z",
+					"mainGameItem": {
+						"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+						"namespace": "fn",
+						"unsearchable": false
+					},
+					"mainGameItemList": [
+						{
+							"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+							"namespace": "fn",
+							"unsearchable": false
+						}
+					],
+					"namespace": "fn",
+					"releaseInfo": [
+						{
+							"appId": "6c914d2868bc4595a470c0edf7544c84",
+							"compatibleApps": [],
+							"dateAdded": "2023-03-14T17:27:00.000Z",
+							"id": "a1a774fdd85c4e0dbf99d5379a8dd608",
+							"platform": [
+								"Windows",
+								"iOS",
+								"Android"
+							]
+						}
+					],
+					"requiresSecureAccount": false,
+					"status": "ACTIVE",
+					"title": "Fortnite OG",
+					"unsearchable": true
+				},
+				{
+					"ageGatings": {},
+					"applicationId": "",
+					"categories": [
+						{
+							"path": "addons/launchable"
+						},
+						{
+							"path": "addons"
+						},
+						{
+							"path": "applications"
+						}
+					],
+					"creationDate": "2024-12-10T19:33:27.478Z",
+					"customAttributes": {
+						"AdditionalCommandLine": {
+							"type": "STRING",
+							"value": "-epicapp=Fortnite -IslandOverride=set_feral_playlists"
+						}
+					},
+					"description": "Fortnite Ballistic",
+					"developer": "Epic Games",
+					"developerId": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
+					"endOfSupport": false,
+					"entitlementName": "47de1965a13e48a8920d6421af028520",
+					"entitlementType": "ENTITLEMENT",
+					"eulaIds": [
+						"epicgames_tos"
+					],
+					"id": "47de1965a13e48a8920d6421af028520",
+					"itemType": "DURABLE",
+					"keyImages": [
+						{
+							"height": 1440,
+							"md5": "96be8e371df1da2d04e8ecdb763a73f1",
+							"size": 317640,
+							"type": "DieselGameBox",
+							"uploadedDate": "2025-04-07T22:53:56.462Z",
+							"url": "https://cdn1.epicgames.com/item/fn/EN_FNFERAL_34-30_EGS_Launcher_KeyArt_Blade_2560x1440_2560x1440-96be8e371df1da2d04e8ecdb763a73f1",
+							"width": 2560
+						},
+						{
+							"height": 1600,
+							"md5": "c4db6b11fefe88b384cee0ff0e29e369",
+							"size": 189894,
+							"type": "DieselGameBoxTall",
+							"uploadedDate": "2025-04-07T22:54:02.667Z",
+							"url": "https://cdn1.epicgames.com/item/fn/EN_FNFERAL_34-30_EGS_Launcher_KeyArt_Blade_1200x1600_1200x1600-c4db6b11fefe88b384cee0ff0e29e369",
+							"width": 1200
+						}
+					],
+					"lastModifiedDate": "2025-11-29T21:34:28.520Z",
+					"mainGameItem": {
+						"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+						"namespace": "fn",
+						"unsearchable": false
+					},
+					"mainGameItemList": [
+						{
+							"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+							"namespace": "fn",
+							"unsearchable": false
+						}
+					],
+					"namespace": "fn",
+					"releaseInfo": [
+						{
+							"appId": "b32cab21aa3841f2b9455f9d465b0e3f",
+							"compatibleApps": [],
+							"dateAdded": "2023-03-14T17:27:00.000Z",
+							"id": "a1a774fdd85c4e0dbf99d5379a8dd608",
+							"platform": [
+								"Windows",
+								"iOS",
+								"Android"
+							]
+						}
+					],
+					"requiresSecureAccount": false,
+					"status": "ACTIVE",
+					"title": "Fortnite Ballistic",
+					"unsearchable": true
+				},
+				{
+					"ageGatings": {
+						"ACB": {
+							"ageControl": 15,
+							"descriptor": "Mild Violence,In-Game Purchases,Online Interactivity and Chat",
+							"descriptorIds": [
+								140,
+								964,
+								1076
+							],
+							"element": "",
+							"elementIds": [],
+							"gameRating": "Parental guidance",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/ACB_PG_192_192x192-e0cb71e555d104463b8cb6ace89895d9",
+							"ratingSystem": "ACB",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/AUS-PG_530x530-b3b0143b27b1e3837cca000e7d5f2912",
+							"title": "Parental guidance"
+						},
+						"ClassInd": {
+							"ageControl": 0,
+							"descriptor": "Violência",
+							"descriptorIds": [
+								60
+							],
+							"element": "",
+							"elementIds": [],
+							"gameRating": "Livre",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/ClassInd_L_192_192x192-aa1269028601dc012f85035c1d7d7051",
+							"ratingSystem": "ClassInd",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/CLASSIND-L_530x530-c5b29e0ece4d40ec2f4ebea341c60e23",
+							"title": "Livre"
+						},
+						"ESRB": {
+							"ageControl": 10,
+							"descriptor": "Fantasy Violence,Crude Humor",
+							"descriptorIds": [
+								8,
+								6
+							],
+							"element": "",
+							"elementIds": [],
+							"gameRating": "Everyone 10+",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/ESRB_E10_192_192x192-a046506419451571f45dad71361cf56d",
+							"ratingSystem": "ESRB",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/ESRB-EN-E10_354x530-75085475e398dc8aa8b84fa7040f6119",
+							"title": "Everyone 10+"
+						},
+						"GRAC": {
+							"ageControl": 0,
+							"descriptor": "폭력성",
+							"descriptorIds": [
+								440
+							],
+							"element": "",
+							"elementIds": [],
+							"gameRating": "전체이용가",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/GRAC_All_192_192x192-0973b9b3768114fdfa4d864efd697ae2",
+							"ratingSystem": "GRAC",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/GRAC-ALL_396x530-56fd85544364d3eab30fe93ed24e9394",
+							"title": "전체이용가"
+						},
+						"OFLC": {
+							"ageControl": 8,
+							"element": "",
+							"elementIds": [],
+							"gameRating": "PG",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/oflc_pg_256x256-ba3755202c132b84708dadf34e17b930",
+							"ratingSystem": "OFLC",
+							"title": "PG"
+						},
+						"PEGI": {
+							"ageControl": 3,
+							"descriptor": "Violence,In-Game Purchases",
+							"descriptorIds": [
+								51,
+								895
+							],
+							"element": "",
+							"elementIds": [],
+							"gameRating": "PEGI 3",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/PEGI_3_192_192x192-490b93ddf59fb4ac1148d1eb9083626a",
+							"ratingSystem": "PEGI",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/PEGI-3_435x530-c931ab5bb4eb190f6e8e542081c49dc4",
+							"title": "PEGI 3"
+						},
+						"USK": {
+							"ageControl": 6,
+							"descriptor": "",
+							"descriptorIds": [],
+							"element": "",
+							"elementIds": [],
+							"gameRating": "USK ab 6",
+							"isIARC": false,
+							"isTrad": true,
+							"ratingImage": "https://cdn1.epicgames.com/gameRating/gameRating/USK_6_192_192x192-0e4126fd64745c56a34d5abfb0586390",
+							"ratingSystem": "USK",
+							"rectangularRatingImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/USK-6_530x530-4607360a9f3e1b1b06f334db4aefe16d",
+							"title": "USK ab 6"
+						}
+					},
+					"applicationId": "",
+					"categories": [
+						{
+							"path": "addons/launchable"
+						},
+						{
+							"path": "addons"
+						},
+						{
+							"path": "applications"
+						}
+					],
+					"creationDate": "2024-12-10T18:28:00.630Z",
+					"customAttributes": {
+						"AdditionalCommandLine": {
+							"type": "STRING",
+							"value": "-epicapp=Fortnite -IslandOverride=playlist_sprout"
+						}
+					},
+					"description": "LEGO® Fortnite Brick Life",
+					"developer": "Epic Games",
+					"developerId": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
+					"endOfSupport": false,
+					"entitlementName": "e3b85ee768c949deae7473ce5039540b",
+					"entitlementType": "ENTITLEMENT",
+					"eulaIds": [
+						"epicgames_tos"
+					],
+					"id": "e3b85ee768c949deae7473ce5039540b",
+					"itemType": "DURABLE",
+					"keyImages": [
+						{
+							"height": 1440,
+							"md5": "dc43f808fc65d92258190288e57c5603",
+							"size": 1273681,
+							"type": "DieselGameBox",
+							"uploadedDate": "2024-12-19T23:21:07.046Z",
+							"url": "https://cdn1.epicgames.com/item/fn/FNBL_33-10_Sprout_EGS_KeyArt_Carousel_PDP_2560x1440_logo_2560x1440-dc43f808fc65d92258190288e57c5603",
+							"width": 2560
+						},
+						{
+							"height": 1600,
+							"md5": "ec56bf5a64f844bfc39b9972a735cf8b",
+							"size": 751330,
+							"type": "DieselGameBoxTall",
+							"uploadedDate": "2024-12-19T23:21:14.875Z",
+							"url": "https://cdn1.epicgames.com/item/fn/FNBL_33-10_Sprout_EGS_Keyart_MobileCarousel_1200x1600_1200x1600-ec56bf5a64f844bfc39b9972a735cf8b",
+							"width": 1200
+						}
+					],
+					"lastModifiedDate": "2025-11-29T21:35:33.940Z",
+					"mainGameItem": {
+						"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+						"namespace": "fn",
+						"unsearchable": false
+					},
+					"mainGameItemList": [
+						{
+							"id": "4fe75bbc5a674f4f9b356b5c90567da5",
+							"namespace": "fn",
+							"unsearchable": false
+						}
+					],
+					"namespace": "fn",
+					"releaseInfo": [
+						{
+							"appId": "46328c1731bf4fa5b257413e0431453b",
+							"compatibleApps": [],
+							"dateAdded": "2023-12-06T23:13:00.000Z",
+							"id": "ff932a2d29144640ad1a8ac3aa607dc8",
+							"platform": [
+								"Windows",
+								"iOS",
+								"Android"
+							]
+						}
+					],
+					"requiresSecureAccount": false,
+					"status": "ACTIVE",
+					"title": "LEGO® Fortnite Brick Life",
+					"unsearchable": true
+				}
+			],
+			"folder_name": "Fortnite",
+			"install": {
+				"install_size": "0",
+				"is_dlc": false
+			},
+			"is_installed": false,
+			"namespace": "fn",
+			"is_mac_native": true,
+			"save_folder": "",
+			"title": "Fortnite",
+			"canRunOffline": false,
+			"isEAManaged": false,
+			"is_linux_native": false,
+			"runner": "legendary",
+			"store_url": "https://www.epicgames.com/store/product/fortnite"
+		},
+		{
+			"app_name": "a0fbc3eb950341e290ae20a7d02cc501",
+			"art_cover": "https://cdn1.epicgames.com/spt-assets/5c65df08b03a43eb8be026116ef8e979/five-nights-at-freddys-into-the-pit-1tlce.png",
+			"art_square": "https://cdn1.epicgames.com/spt-assets/5c65df08b03a43eb8be026116ef8e979/five-nights-at-freddys-into-the-pit-pqsoz.png",
+			"cloud_save_enabled": true,
+			"developer": "Mega Cat Studios",
+			"extra": {
+				"about": {
+					"description": "Five Nights at Freddy's: Into the Pit",
+					"shortDescription": ""
+				},
+				"reqs": [],
+				"storeUrl": "https://www.epicgames.com/store/product/five-nights-at-freddy-into-the-pit"
+			},
+			"folder_name": "FiveNightsatFreddysICCsjt",
+			"install": {
+				"install_size": "0",
+				"is_dlc": false
+			},
+			"is_installed": false,
+			"namespace": "afa1cff319dd4f81b58006e223dd4401",
+			"is_mac_native": false,
+			"save_folder": "{AppData}/../LocalLow/Mega Cat Studios/FNaFIntoThePit/",
+			"title": "Five Nights at Freddy's: Into the Pit",
+			"canRunOffline": false,
+			"isEAManaged": false,
+			"is_linux_native": false,
+			"runner": "legendary",
+			"store_url": "https://www.epicgames.com/store/product/five-nights-at-freddy-into-the-pit"
+		}
+	],
+	"__timestamp": {
+		"library": "Tue Dec 02 2025 02:30:57 GMT+0200 (за східноєвропейським стандартним часом)"
+	}
+}

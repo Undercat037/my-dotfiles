@@ -1,0 +1,5 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "extensions.ignoreRecommendations": true,
+    "python.defaultInterpreterPath": "/bin/python"
+}

@@ -1,0 +1,26 @@
+[
+    {
+        "display_name": "",
+        "enabled": true,
+        "encoders": [],
+        "id": "",
+        "module_name": "obs-vaapi",
+        "outputs": [],
+        "services": [],
+        "sources": [],
+        "version": ""
+    },
+    {
+        "display_name": "linux-vkcapture",
+        "enabled": true,
+        "encoders": [],
+        "id": "",
+        "module_name": "linux-vkcapture",
+        "outputs": [],
+        "services": [],
+        "sources": [
+            "vkcapture-source"
+        ],
+        "version": ""
+    }
+]

@@ -1,0 +1,3 @@
+2025/12/02-02:31:21.289 b9a7 Reusing MANIFEST /home/deltacat/.config/heroic/Partitions/epicstore/IndexedDB/https_store.epicgames.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/12/02-02:31:21.290 b9a7 Recovering log #3
+2025/12/02-02:31:21.290 b9a7 Reusing old log /home/deltacat/.config/heroic/Partitions/epicstore/IndexedDB/https_store.epicgames.com_0.indexeddb.leveldb/000003.log 

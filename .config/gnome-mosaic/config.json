@@ -1,0 +1,10 @@
+{
+  "float": [
+    {
+      "class": "gnome-mosaic-example",
+      "title": "gnome-mosaic-example"
+    }
+  ],
+  "skiptaskbarhidden": [],
+  "log_on_focus": false
+}

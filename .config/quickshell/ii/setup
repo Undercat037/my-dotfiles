@@ -1,0 +1,765 @@
+#!/usr/bin/env bash
+# iNiR setup - Simplified installer
+# Commands: install, update, doctor, rollback (or TUI if no args)
+
+cd "$(dirname "$0")"
+REPO_ROOT="$(pwd)"
+
+# Handle Ctrl+C gracefully
+cleanup() {
+    echo ""
+    echo -e "\033[33mCancelled.\033[0m"
+    rm -rf /tmp/buildyay /tmp/buildparu 2>/dev/null
+    exit 130
+}
+
+###############################################################################
+# Migrate
+###############################################################################
+run_migrate() {
+    echo ""
+    tui_title "iNiR Migrations"
+    echo ""
+
+    # Always apply REQUIRED migrations first
+    run_migrations_auto
+
+    local pending=$(count_pending_migrations 2>/dev/null || echo "0")
+    if [[ "$pending" -gt 0 ]]; then
+        tui_warn "$pending pending migration(s)"
+        run_migrations_interactive
+    else
+        tui_success "No pending migrations"
+    fi
+}
+trap cleanup INT
+trap 'rm -rf /tmp/buildyay /tmp/buildparu 2>/dev/null' EXIT TERM
+
+# Load core libraries
+source ./sdata/lib/environment-variables.sh
+source ./sdata/lib/functions.sh
+source ./sdata/lib/tui.sh
+source ./sdata/lib/package-installers.sh
+source ./sdata/lib/dist-determine.sh
+source ./sdata/lib/conflicts.sh
+source ./sdata/lib/versioning.sh
+source ./sdata/lib/migrations.sh
+source ./sdata/lib/robust-update.sh
+source ./sdata/lib/doctor.sh
+source ./sdata/lib/snapshots.sh
+source ./sdata/lib/uninstall.sh
+source ./sdata/lib/user-modifications.sh
+
+prevent_sudo_or_root
+
+# Defaults
+ask=true
+quiet=false
+
+###############################################################################
+# Help
+###############################################################################
+show_help() {
+    echo ""
+    tui_title "iNiR setup"
+    
+    tui_key_value "Usage:" "./setup [command] [options]"
+    echo ""
+    
+    tui_subtitle "Commands"
+    tui_list_item "(none)      Interactive menu"
+    tui_list_item "install     Full installation (deps + config + files)"
+    tui_list_item "update      Check remote, pull, sync, restart shell"
+    tui_list_item "migrate     Review/apply config migrations"
+    tui_list_item "doctor      Diagnose and fix problems"
+    tui_list_item "rollback    Restore previous snapshot"
+    tui_list_item "my-changes  View/restore your preserved modifications"
+    tui_list_item "uninstall   Remove iNiR from system"
+    echo ""
+
+    tui_subtitle "Options"
+    tui_list_item "-y, --yes     Skip prompts (auto-yes)"
+    tui_list_item "-q, --quiet   Minimal output"
+    tui_list_item "-h, --help    Show this help"
+    echo ""
+
+    tui_subtitle "Examples"
+    tui_dim "  ./setup              # Interactive menu"
+    tui_dim "  ./setup update       # Check for updates and apply"
+    tui_dim "  ./setup migrate      # Review/apply pending migrations"
+    tui_dim "  ./setup doctor       # Fix common issues"
+    tui_dim "  ./setup rollback     # Restore previous state"
+    tui_dim "  ./setup my-changes   # View/restore your modifications"
+    echo ""
+}
+
+###############################################################################
+# Version Status Display
+###############################################################################
+show_version_info() {
+    local installed_ver=$(get_installed_version)
+    local installed_commit=$(get_installed_commit)
+    local repo_ver=$(get_repo_version)
+    local repo_commit=$(get_repo_commit)
+    
+    echo ""
+    tui_status_line "Installed:" "$installed_ver ($installed_commit)" "ok"
+    tui_status_line "Available:" "$repo_ver ($repo_commit)" ""
+    
+    # Check for pending migrations
+    local pending=$(count_pending_migrations 2>/dev/null || echo "0")
+    if [[ "$pending" -gt 0 ]]; then
+        tui_status_line "Migrations:" "$pending pending" "warn"
+    fi
+    
+    # Check for updates
+    if [[ "$installed_commit" != "$repo_commit" ]]; then
+        echo ""
+        tui_warn "Update available"
+    fi
+}
+
+###############################################################################
+# TUI Menu
+###############################################################################
+tui_menu() {
+    clear
+    tui_banner
+    
+    # Detect current state
+    local is_installed=false
+    [[ -f "${XDG_CONFIG_HOME}/illogical-impulse/installed_true" ]] && is_installed=true
+    
+    if $is_installed; then
+        show_version_info
+        echo ""
+        tui_divider
+    fi
+    
+    echo ""
+    
+    # Menu options based on state
+    local choice
+    if $is_installed; then
+        choice=$(tui_choose "What would you like to do?" \
+            "Update" "Migrate" "Doctor" "Rollback" "My Changes" "Reinstall" "Uninstall" "Status" "Help" "Exit")
+    else
+        choice=$(tui_choose "What would you like to do?" \
+            "Install" "Help" "Exit")
+    fi
+
+    case "$choice" in
+        Install|Reinstall) run_install ;;
+        Update) run_update ;;
+        Migrate) run_migrate ;;
+        Doctor) run_doctor ;;
+        Rollback) run_rollback ;;
+        "My Changes") run_my_changes ;;
+        Uninstall) run_uninstall ;;
+        Status) show_status; read -p "Press Enter to continue..." ;;
+        Help) show_help; read -p "Press Enter to continue..." ;;
+        *) exit 0 ;;
+    esac
+}
+
+###############################################################################
+# Status Command
+###############################################################################
+show_status() {
+    local installed_ver=$(get_installed_version)
+    local installed_commit=$(get_installed_commit)
+    local repo_ver=$(get_repo_version)
+    local repo_commit=$(get_repo_commit)
+    
+    tui_title "Status"
+    
+    tui_table_header "Property" "Value" 14 36
+    tui_table_row "Version" "$installed_ver" 14 36
+    tui_table_row "Commit" "$installed_commit" 14 36
+    tui_table_row "Repo Version" "$repo_ver" 14 36
+    tui_table_row "Repo Commit" "$repo_commit" 14 36
+    tui_table_footer 14 36
+    
+    tui_title "Health Checks"
+    
+    # Check shell status
+    if pgrep -f "qs.*-c.*ii" &>/dev/null; then
+        tui_check_ok "Shell is running"
+    else
+        tui_check_warn "Shell is not running"
+    fi
+    
+    # Check Niri
+    if [[ -n "$NIRI_SOCKET" ]]; then
+        tui_check_ok "Niri compositor detected"
+    else
+        tui_check_warn "Not running in Niri session"
+    fi
+    
+    # Pending migrations
+    local pending=$(count_pending_migrations 2>/dev/null || echo "0")
+    if [[ "$pending" -gt 0 ]]; then
+        tui_check_warn "$pending pending migration(s)"
+        tui_info "Run './setup migrate' to review"
+    else
+        tui_check_ok "No pending migrations"
+    fi
+    
+    # Snapshots
+    local snapshot_count=$(list_snapshots 2>/dev/null | wc -l)
+    if [[ "$snapshot_count" -gt 0 ]]; then
+        tui_check_ok "$snapshot_count snapshot(s) available"
+    else
+        tui_check_skip "No snapshots"
+    fi
+    echo ""
+}
+
+###############################################################################
+# Install
+###############################################################################
+run_install() {
+    detect_distro
+    
+    # Greeting & system info
+    source ./sdata/subcmd-install/0.greeting.sh
+    
+    # Check conflicts
+    check_conflicts
+    
+    # 1. Dependencies
+    if [[ "${SKIP_DEPS}" != "true" ]]; then
+        tui_step 1 3 "Installing dependencies"
+        source ./sdata/subcmd-install/1.deps-router.sh
+    fi
+    
+    # 2. System setup (groups, services)
+    if [[ "${SKIP_SETUPS}" != "true" ]]; then
+        tui_step 2 3 "System configuration"
+        source ./sdata/subcmd-install/2.setups.sh
+    fi
+    
+    # 3. Config files
+    if [[ "${SKIP_FILES}" != "true" ]]; then
+        tui_step 3 3 "Installing config files"
+        source ./sdata/subcmd-install/3.files.sh
+    fi
+
+    # Set version tracking
+    set_installed_version "$(get_repo_version)" "$(get_repo_commit)" "setup"
+}
+
+###############################################################################
+# My Changes - View and restore preserved user modifications
+###############################################################################
+run_my_changes() {
+    echo ""
+    tui_title "Your Preserved Modifications"
+    echo ""
+
+    # Check if any preserved modifications exist
+    if [[ ! -d "$USER_MODS_DIR" ]] || [[ -z "$(ls -A "$USER_MODS_DIR" 2>/dev/null)" ]]; then
+        tui_info "No preserved modifications found."
+        echo ""
+        tui_dim "When you update and have local changes, they are saved here."
+        tui_dim "You can then restore them after the update completes."
+        echo ""
+        read -rp "Press Enter to continue..."
+        return 0
+    fi
+
+    # List available preserved modifications
+    local mods_list=($(ls -1t "$USER_MODS_DIR" 2>/dev/null))
+
+    if [[ ${#mods_list[@]} -eq 0 ]]; then
+        tui_info "No preserved modifications found."
+        read -rp "Press Enter to continue..."
+        return 0
+    fi
+
+    # Build options with details
+    local options=()
+    for mod_dir in "${mods_list[@]}"; do
+        local meta="${USER_MODS_DIR}/${mod_dir}/metadata.json"
+        if [[ -f "$meta" ]]; then
+            local mod_count=$(grep -o '"modified_count": [0-9]*' "$meta" 2>/dev/null | grep -o '[0-9]*' || echo 0)
+            local add_count=$(grep -o '"additions_count": [0-9]*' "$meta" 2>/dev/null | grep -o '[0-9]*' || echo 0)
+            local date_formatted=$(echo "$mod_dir" | sed 's/\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)-\([0-9]\{2\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)/\1-\2-\3 \4:\5/')
+            options+=("$date_formatted (${mod_count} modified, ${add_count} added)")
+        else
+            options+=("$mod_dir")
+        fi
+    done
+    options+=("Back")
+
+    local choice
+    choice=$(tui_choose "Select a backup to view/restore:" "${options[@]}")
+
+    [[ "$choice" == "Back" ]] && return 0
+
+    # Find which backup was selected
+    local selected_idx=0
+    for i in "${!options[@]}"; do
+        if [[ "${options[$i]}" == "$choice" ]]; then
+            selected_idx=$i
+            break
+        fi
+    done
+
+    local selected_dir="${mods_list[$selected_idx]}"
+    local selected_path="${USER_MODS_DIR}/${selected_dir}"
+
+    # Show contents of selected backup
+    echo ""
+    tui_subtitle "Contents of $selected_dir"
+    echo ""
+
+    # List modified files
+    if [[ -d "$selected_path" ]]; then
+        local files_found=false
+
+        # Show modified files (excluding _additions and metadata)
+        while IFS= read -r file; do
+            [[ "$file" == *"metadata.json" ]] && continue
+            [[ "$file" == *"_additions"* ]] && continue
+            files_found=true
+            local rel_path="${file#$selected_path/}"
+            echo "    [modified] $rel_path"
+        done < <(find "$selected_path" -type f 2>/dev/null)
+
+        # Show additions
+        if [[ -d "$selected_path/_additions" ]]; then
+            while IFS= read -r file; do
+                files_found=true
+                local rel_path="${file#$selected_path/_additions/}"
+                echo "    [added]    $rel_path"
+            done < <(find "$selected_path/_additions" -type f 2>/dev/null)
+        fi
+
+        if ! $files_found; then
+            tui_dim "    (no files found)"
+        fi
+    fi
+
+    echo ""
+
+    # Action menu
+    local action
+    action=$(tui_choose "What would you like to do?" \
+        "Restore All" \
+        "Restore Single File" \
+        "Open in File Manager" \
+        "Delete This Backup" \
+        "Back")
+
+    case "$action" in
+        "Restore All")
+            echo ""
+            tui_warn "This will copy all preserved files back to your installation."
+            tui_info "Existing files will be overwritten."
+            if tui_confirm "Continue?" "no"; then
+                restore_all_user_mods "$selected_path"
+            fi
+            ;;
+        "Restore Single File")
+            restore_single_user_mod "$selected_path"
+            ;;
+        "Open in File Manager")
+            if command -v xdg-open &>/dev/null; then
+                xdg-open "$selected_path" &>/dev/null &
+                tui_success "Opened in file manager"
+            else
+                tui_info "Path: $selected_path"
+            fi
+            ;;
+        "Delete This Backup")
+            if tui_confirm "Delete this backup permanently?" "no"; then
+                rm -rf "$selected_path"
+                tui_success "Backup deleted"
+            fi
+            ;;
+        *)
+            return 0
+            ;;
+    esac
+
+    echo ""
+    read -rp "Press Enter to continue..."
+}
+
+# Helper: Restore all files from a user-mods backup
+restore_all_user_mods() {
+    local backup_path="$1"
+    local target="${XDG_CONFIG_HOME}/quickshell/ii"
+    local restored=0
+
+    # Restore modified files
+    while IFS= read -r file; do
+        [[ "$file" == *"metadata.json" ]] && continue
+        [[ "$file" == *"_additions"* ]] && continue
+
+        local rel_path="${file#$backup_path/}"
+        local dest="${target}/${rel_path}"
+
+        mkdir -p "$(dirname "$dest")"
+        cp "$file" "$dest"
+        ((restored++))
+        tui_dim "  Restored: $rel_path"
+    done < <(find "$backup_path" -type f 2>/dev/null)
+
+    # Restore additions
+    if [[ -d "$backup_path/_additions" ]]; then
+        while IFS= read -r file; do
+            local rel_path="${file#$backup_path/_additions/}"
+            local dest="${target}/${rel_path}"
+
+            mkdir -p "$(dirname "$dest")"
+            cp "$file" "$dest"
+            ((restored++))
+            tui_dim "  Restored: $rel_path"
+        done < <(find "$backup_path/_additions" -type f 2>/dev/null)
+    fi
+
+    echo ""
+    tui_success "Restored $restored file(s)"
+    tui_info "Restart the shell to apply changes: qs kill -c ii; qs -c ii"
+}
+
+# Helper: Restore a single file from user-mods backup
+restore_single_user_mod() {
+    local backup_path="$1"
+    local target="${XDG_CONFIG_HOME}/quickshell/ii"
+
+    # Build list of files
+    local files=()
+    while IFS= read -r file; do
+        [[ "$file" == *"metadata.json" ]] && continue
+        [[ "$file" == *"_additions"* ]] && continue
+        local rel_path="${file#$backup_path/}"
+        files+=("$rel_path")
+    done < <(find "$backup_path" -type f 2>/dev/null)
+
+    # Add files from _additions
+    if [[ -d "$backup_path/_additions" ]]; then
+        while IFS= read -r file; do
+            local rel_path="${file#$backup_path/_additions/}"
+            files+=("[added] $rel_path")
+        done < <(find "$backup_path/_additions" -type f 2>/dev/null)
+    fi
+
+    if [[ ${#files[@]} -eq 0 ]]; then
+        tui_warn "No files to restore"
+        return 1
+    fi
+
+    files+=("Cancel")
+
+    local choice
+    choice=$(tui_choose "Select file to restore:" "${files[@]}")
+
+    [[ "$choice" == "Cancel" ]] && return 0
+
+    # Handle [added] prefix
+    local src_file dest_file
+    if [[ "$choice" == "[added] "* ]]; then
+        local rel_path="${choice#\[added\] }"
+        src_file="$backup_path/_additions/$rel_path"
+        dest_file="$target/$rel_path"
+    else
+        src_file="$backup_path/$choice"
+        dest_file="$target/$choice"
+    fi
+
+    mkdir -p "$(dirname "$dest_file")"
+    cp "$src_file" "$dest_file"
+    tui_success "Restored: $choice"
+    tui_info "Restart the shell to apply changes"
+}
+
+###############################################################################
+# Update
+###############################################################################
+run_update() {
+    echo ""
+    tui_title "Checking for updates..."
+    echo ""
+    
+    if check_remote_updates; then
+        show_pending_commits
+        
+        if $ask; then
+            if ! tui_confirm "Pull and apply these updates?"; then
+                echo "Cancelled."
+                return 0
+            fi
+        fi
+        
+        # Create snapshot BEFORE pulling
+        tui_info "Creating snapshot..."
+        local remote_commit=$(get_remote_commit)
+        local snapshot_id=$(create_snapshot "update" "Before update to ${remote_commit}" "$remote_commit")
+        tui_success "Snapshot: $snapshot_id"
+        
+        # Pull changes
+        tui_info "Pulling changes..."
+        if ! git -C "$REPO_ROOT" pull --ff-only origin 2>/dev/null; then
+            tui_error "Git pull failed. You may have local changes."
+            tui_info "Try: git stash && ./setup update"
+            return 1
+        fi
+        tui_success "Changes pulled"
+    else
+        # Check if local repo is ahead of installed
+        local installed_ver=$(get_installed_version)
+        local installed_commit=$(get_installed_commit)
+        local repo_ver=$(get_repo_version)
+        local repo_commit=$(get_repo_commit)
+        
+        if [[ "$installed_ver" == "0.0.0" ]] && [[ -f "${XDG_CONFIG_HOME}/illogical-impulse/installed_true" ]]; then
+            tui_info "Detected existing installation without version tracking"
+        elif [[ "$installed_commit" == "$repo_commit" ]]; then
+            tui_success "Already up to date ($installed_ver)"
+            
+            local pending=$(count_pending_migrations)
+            if [[ "$pending" -gt 0 ]]; then
+                echo ""
+                tui_warn "$pending pending migration(s) available"
+                if $ask && tui_confirm "Apply migrations now?"; then
+                    run_migrations_interactive
+                fi
+            fi
+            return 0
+        else
+            # Local repo ahead of installed - create snapshot
+            tui_info "Creating snapshot..."
+            local snapshot_id=$(create_snapshot "update" "Before sync to ${repo_commit}" "$repo_commit")
+            tui_success "Snapshot: $snapshot_id"
+        fi
+    fi
+    
+    # Sync files
+    local repo_ver=$(get_repo_version)
+    local repo_commit=$(get_repo_commit)
+    
+    echo ""
+    tui_info "Syncing iNiR..."
+    
+    II_SOURCE="${REPO_ROOT}"
+    II_TARGET="${XDG_CONFIG_HOME}/quickshell/ii"
+    
+    # Check if source and target are the same (dev setup)
+    local src_real=$(realpath "$II_SOURCE" 2>/dev/null || echo "$II_SOURCE")
+    local tgt_real=$(realpath "$II_TARGET" 2>/dev/null || echo "$II_TARGET")
+
+    if [[ "$src_real" != "$tgt_real" ]]; then
+        # Check for user modifications before syncing
+        PRESERVED_MODS_DIR=""
+        if [[ -f "${II_TARGET}/.ii-manifest" ]] && manifest_has_checksums "${II_TARGET}/.ii-manifest"; then
+            echo ""
+            tui_info "Checking for local modifications..."
+
+            local modified_files_str
+            local added_files_str
+            modified_files_str=$(detect_user_modifications "$II_TARGET" "${II_TARGET}/.ii-manifest")
+            added_files_str=$(detect_user_additions "$II_TARGET" "${II_TARGET}/.ii-manifest")
+
+            local mod_count=0
+            local add_count=0
+            [[ -n "$modified_files_str" ]] && mod_count=$(echo "$modified_files_str" | grep -c . || echo 0)
+            [[ -n "$added_files_str" ]] && add_count=$(echo "$added_files_str" | grep -c . || echo 0)
+            local total_mods=$((mod_count + add_count))
+
+            if [[ $total_mods -gt 0 ]]; then
+                if ! handle_user_modifications "$modified_files_str" "$added_files_str"; then
+                    return 1  # User cancelled
+                fi
+            else
+                tui_success "No local modifications detected"
+            fi
+        fi
+
+        echo ""
+        tui_info "Syncing files..."
+
+        # Sync root QML files
+        for qml in "${II_SOURCE}"/*.qml; do
+            [[ -f "$qml" ]] && cp -f "$qml" "${II_TARGET}/$(basename "$qml")"
+        done
+
+        # Sync directories
+        for dir in modules services scripts assets translations sdata/uv; do
+            [[ -d "${II_SOURCE}/${dir}" ]] && mkdir -p "${II_TARGET}/${dir}" && rsync -a --delete "${II_SOURCE}/${dir}/" "${II_TARGET}/${dir}/"
+        done
+
+        # Cleanup deprecated files
+        [[ -f "${II_TARGET}/requirements.txt" ]] && rm -f "${II_TARGET}/requirements.txt"
+
+        # Show preservation reminder after sync
+        if [[ -n "$PRESERVED_MODS_DIR" ]]; then
+            echo ""
+            tui_info "Reminder: Your modifications were saved to:"
+            tui_dim "    $PRESERVED_MODS_DIR"
+        fi
+    fi
+    
+    # Generate manifest
+    generate_manifest "$II_SOURCE" "${II_TARGET}/.ii-manifest"
+    
+    # Fix permissions
+    find "$II_TARGET/scripts" \( -name "*.sh" -o -name "*.fish" -o -name "*.py" \) -exec chmod +x {} \; 2>/dev/null || true
+    
+    # Update version
+    set_installed_version "$repo_ver" "$repo_commit" "update"
+    
+    tui_success "Files synced"
+
+    # Update Vesktop themes (themes live outside the quickshell/ii tree)
+    if [[ -d "${REPO_ROOT}/dots/.config/vesktop/themes" ]]; then
+        echo ""
+        tui_info "Updating Vesktop themes..."
+
+        mkdir -p "${XDG_CONFIG_HOME}/vesktop/themes"
+        mkdir -p "${XDG_CONFIG_HOME}/Vesktop/themes"
+
+        OLD_VESKTOP_THEMES=(
+            "midnight-ii.theme.css"
+            "dms-midnight.theme.css"
+            "system24-ii.theme.css"
+            "system24-palette.css"
+            "ii-palette.css"
+            "ii-system24.theme.css"
+        )
+        for old_theme in "${OLD_VESKTOP_THEMES[@]}"; do
+            [[ -f "${XDG_CONFIG_HOME}/vesktop/themes/${old_theme}" ]] && rm -f "${XDG_CONFIG_HOME}/vesktop/themes/${old_theme}"
+            [[ -f "${XDG_CONFIG_HOME}/Vesktop/themes/${old_theme}" ]] && rm -f "${XDG_CONFIG_HOME}/Vesktop/themes/${old_theme}"
+        done
+
+        install_dir "${REPO_ROOT}/dots/.config/vesktop/themes" "${XDG_CONFIG_HOME}/vesktop/themes"
+        install_dir "${REPO_ROOT}/dots/.config/vesktop/themes" "${XDG_CONFIG_HOME}/Vesktop/themes"
+
+        tui_success "Vesktop themes updated"
+    fi
+    
+    # Migrations
+    local pending=$(count_pending_migrations)
+    if [[ "$pending" -gt 0 ]]; then
+        echo ""
+        # Always apply REQUIRED migrations automatically, then offer optional migrations.
+        run_migrations_auto
+        pending=$(count_pending_migrations)
+        if [[ "$pending" -gt 0 ]]; then
+            tui_warn "$pending optional migration(s) available"
+            if $ask && tui_confirm "Review and apply?"; then
+                run_migrations_interactive
+            fi
+        fi
+    fi
+    
+    # Restart shell (only if we have access to the session)
+    echo ""
+    if [[ -n "$NIRI_SOCKET" ]] || [[ -n "$WAYLAND_DISPLAY" ]]; then
+        tui_info "Restarting shell..."
+        qs kill -c ii 2>/dev/null || true
+        sleep 1
+        nohup qs -c ii >/dev/null 2>&1 &
+        disown
+        tui_success "Shell restarted"
+    else
+        tui_warn "Not in graphical session - shell restart skipped"
+        tui_info "The shell will use new files on next restart"
+        tui_info "Or run: qs kill -c ii && qs -c ii"
+    fi
+
+    # Post-update: check for missing dependencies and offer to install them
+    echo ""
+    tui_title "Dependency check"
+    echo ""
+    check_dependencies
+    if [[ ${#doctor_missing_deps[@]} -gt 0 ]]; then
+        tui_warn "Missing packages detected: ${doctor_missing_deps[*]}"
+        if ! $ask || tui_confirm "Install missing packages now?"; then
+            detect_distro
+            SKIP_SYSUPDATE=true
+            ONLY_MISSING_DEPS="${doctor_missing_deps[*]}"
+            source ./sdata/subcmd-install/1.deps-router.sh
+            tui_success "Dependencies installed"
+        else
+            tui_info "Skipped dependency installation"
+        fi
+    else
+        tui_success "All required commands available"
+    fi
+    
+    # Update Python venv packages
+    echo ""
+    tui_title "Python packages"
+    echo ""
+    local venv_dir="${XDG_STATE_HOME}/quickshell/.venv"
+    local req_file="${REPO_ROOT}/sdata/uv/requirements.txt"
+    
+    if [[ -f "$req_file" ]] && command -v uv &>/dev/null; then
+        if [[ ! -d "$venv_dir/bin" ]]; then
+            tui_info "Creating Python venv..."
+            uv venv --prompt ii-venv "$venv_dir" -p 3.12 2>/dev/null || uv venv --prompt ii-venv "$venv_dir" 2>/dev/null
+        fi
+        
+        if [[ -d "$venv_dir/bin" ]]; then
+            tui_info "Updating Python packages..."
+            source "$venv_dir/bin/activate"
+            uv pip install -q -r "$req_file" 2>/dev/null
+            deactivate
+            tui_success "Python packages updated"
+        fi
+    else
+        tui_success "Python packages (skipped - uv not available)"
+    fi
+    
+    echo ""
+    tui_subtitle "Tip: Run './setup rollback' if something breaks"
+}
+
+###############################################################################
+# Doctor
+###############################################################################
+run_doctor() {
+    echo ""
+    tui_title "iNiR Doctor"
+    echo ""
+    run_doctor_with_fixes
+}
+
+###############################################################################
+# Parse args
+###############################################################################
+COMMAND=""
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        install) COMMAND="install"; shift ;;
+        update) COMMAND="update"; shift ;;
+        migrate) COMMAND="migrate"; shift ;;
+        doctor) COMMAND="doctor"; shift ;;
+        rollback) COMMAND="rollback"; shift ;;
+        my-changes) COMMAND="my-changes"; shift ;;
+        uninstall) COMMAND="uninstall"; shift ;;
+        status) COMMAND="status"; shift ;;
+        -y|--yes) ask=false; shift ;;
+        -q|--quiet) quiet=true; shift ;;
+        -h|--help) show_help; exit 0 ;;
+        *) echo "Unknown: $1"; show_help; exit 1 ;;
+    esac
+done
+
+###############################################################################
+# Run
+###############################################################################
+case "$COMMAND" in
+    install) run_install ;;
+    update) run_update ;;
+    migrate) run_migrate ;;
+    doctor) run_doctor ;;
+    rollback) run_rollback ;;
+    my-changes) run_my_changes ;;
+    uninstall) run_uninstall ;;
+    status) show_status ;;
+    "") tui_menu ;;
+esac

@@ -1,0 +1,359 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 15,
+    "spacing": 4,
+    "reload_style_on_change": true,
+
+    "modules-left": [
+        "group/tray-drawer",
+        //"custom/disk",
+        //"custom/disk-root",
+        "group/storage-drawer",
+        "group/cpu-drawer",
+        //"cpu",
+        "network",
+        "custom/quick-actions"
+    ],
+
+    "modules-center": [
+        "group/music-drawer",
+        "hyprland/workspaces",
+        "custom/notification"
+    ],
+
+    "modules-right": [
+        "custom/wallpaper",
+        "group/time-drawer",
+        "custom/ime",
+        //"clock",
+        //"custom/weather",
+        "pulseaudio",
+        //"network#wifi",
+        "group/power-drawer"
+        //"custom/power"
+    ],
+
+    // Left modules
+    "custom/launcher": {
+        "format": "",
+        "tooltip-format": "Application launcher",
+        "on-click": "wlogout"
+    },
+
+    "custom/debug-menu": {
+        "format": "",
+        "tooltip-format": "Debug munu",
+        "on-click": "~/.config/waybar/scripts/tray-icon.sh"
+    },
+
+    "group/setting-drawer": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "tray-child",
+            "transition-left-to-right": true
+         },
+        "modules": [
+            "custom/quick-actions",
+        "custom/debug-menu"
+        ]
+    },
+
+    "custom/wallpaper": {
+        "exec": "ls ~/Pictures/Wallpapers | wc -l",
+        "format": "",
+        "tooltip-format": "Pick from {} wallpapers!",
+        "on-click": "pkill rofi || ~/.config/waybar/scripts/wallpaper-selector.sh"
+    },
+
+    "group/cpu-drawer": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "tray-child",
+            "transition-left-to-right": true
+         },
+        "modules": [
+            "cpu",
+        "custom/memory-gpu",
+        "temperature"
+        ]
+    },
+
+    "cpu": {
+        "format": "󰻠 {usage}%",
+        "interval": 2,
+        "on-click": "kitty --class floating --title floating -e sh -c 'while true; do btop; sleep 0.1; done' &"
+    },
+
+    "custom/memory-gpu": {
+        "exec": "~/.config/waybar/scripts/memory-gpu.sh",
+        "format": "{}",
+        "return-type": "json",
+        "interval": 2,
+        "on-click": "kitty --class floating --title floating -e sh -c 'while true; do btop; sleep 0.1; done' &"
+    },
+
+    "network": {
+        "format": "󰇚 {bandwidthDownBits} 󰕒 {bandwidthUpBits}",
+        "format-disconnected": "󰛳 Disconnected",
+        "tooltip-format": "Down: {bandwidthDownBits} Up: {bandwidthUpBits}",
+        "interval": 2,
+        "on-click": "kitty --class floating --title floating -e sh -c 'while true; do btop; sleep 0.1; done' &"
+    },
+
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp3_input",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", "", ""],
+        "tooltip-format": "CPU Temp: {temperatureC}°C",
+        "critical-threshold": 85,
+        "interval": 2,
+        "on-click": "kitty --class floating --title floating -e powertop &"
+    },
+
+    // Определение сворачивающегося трея
+
+    "group/tray-drawer": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "tray-child",
+            "transition-left-to-right": true
+         },
+        "modules": [
+            "custom/launcher", // Главная кнопка-триггер
+        "custom/debug-menu",
+        "tray"                 // Выезжающий контент
+        ]
+    },
+
+    "custom/launcher": {
+        "format": "",
+        "tooltip-format": "Wlogout and tray",
+        "on-click": "wlogout"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    
+
+        "group/storage-drawer": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "tray-child",
+            "transition-left-to-right": true
+         },
+        "modules": [
+            "custom/storage", // Главная кнопка-триггер
+        "custom/disk-root",
+        "custom/disk"                // Выезжающий контент
+        ]
+    },
+
+    "custom/storage": {
+        "format": "󰋊",
+        "tooltip-format": "Storage on / & /home partition",
+        "on-click": "none"
+    },
+
+    "custom/disk": {
+        "exec": "~/.config/waybar/scripts/disk.sh",
+        "format": "/home {}",
+        "return-type": "json",
+        "interval": 2,
+        "on-click": "kitty --class floating --title floating -e watch duf"
+    },
+
+    "custom/disk-root": {
+        "exec": "~/.config/waybar/scripts/disk-root.sh",
+        "format": "/root {}",
+        "return-type": "json",
+        "interval": 2,
+        "on-click": "kitty --class floating --title floating -e watch duf"
+    },
+
+    // Center modules
+
+    // --- ГРУППА ДЛЯ МУЗЫКИ ---
+    "group/music-drawer": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "tray-child",
+            "transition-left-to-right": true
+         },
+        "modules": [
+            "custom/play-pause", // Главная кнопка-триггер
+        "custom/media-prev",
+        "custom/media-next"                // Выезжающий контент
+        ]
+    },
+
+
+    "mpris": {
+        "format": "{player_icon}",
+        "format-paused": "{status_icon}",
+        "player-icons": {
+            "default": "",
+            "mpv": ""
+        },
+        "status-icons": {
+            "paused": ""
+        },
+        "interval":1,
+        "tooltip-format": " {player}\n {artist}\n {album} {title}\n [{position}/{length}]"
+    },
+
+    "custom/play-pause": {
+            // Выводим иконку паузы (), если играет, иначе всегда Play ()
+            "exec": "playerctl status 2>/dev/null | grep -q 'Playing' && echo '' || echo ''",
+            "interval": 1,
+            "on-click": "playerctl play-pause",
+            "tooltip": false
+    },
+
+
+    "custom/media-prev": {
+            "format": "",
+            "on-click": "playerctl previous",
+            "tooltip": false
+        },
+
+        "custom/media-next": {
+            "format": "",
+            "on-click": "playerctl next",
+            "tooltip": false
+        },
+
+    
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "on-click": "activate",
+        "on-scroll-up": "~/.config/waybar/scripts/workspace-scroll.sh up",
+        "on-scroll-down": "~/.config/waybar/scripts/workspace-scroll.sh down",
+        "all-outputs": true,
+        "persistent-workspaces": {
+            "*": 10,
+            "*": 10
+        }
+    },
+
+    "custom/notification": {
+        "tooltip-format": "Notifications: {}",
+        "format": "{} {icon}",
+        "format-icons": {
+            "notification": "󰂚",
+            "none": "󰂜",
+            "dnd-notification": "󰂛",
+            "dnd-none": "󰪑",
+            "inhibited-notification": "󰂚",
+            "inhibited-none": "󰂜",
+            "dnd-inhibited-notification": "󰂛",
+            "dnd-inhibited-none": "󰪑"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "sleep 0.1 && swaync-client -t -sw",
+        "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+        "escape": true
+    },
+
+    // Right modules
+    "custom/ime": {
+        "exec": "~/.config/waybar/scripts/ime-status.sh",
+        "return-type": "json",
+        "interval": 1,
+        "format": "󰇧 {}",
+        "on-click": "~/.config/waybar/scripts/ime-switch.sh",
+        "tooltip": true
+    },
+    "group/time-drawer": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 450,
+            "children-class": "tray-child",
+            "transition-left-to-right": false
+         },
+        "modules": [
+            "clock", // Главная кнопка-триггер
+        "custom/weather"               // Выезжающий контент
+        ]
+    },
+
+    "clock": {
+        "format": "{:%d/%m/%Y  %H:%M:%S}",
+        "on-click": "kitty --class floating --title 'Calendar' -e calcurse",
+        "tooltip-format": "<big>Click to launch </big>\n<tt>{calendar}</tt>",
+        "interval": 1
+    },
+
+    "custom/weather": {
+        "exec": "~/.config/waybar/scripts/weather.sh",
+        "return-type": "json",
+        "interval": 120,
+        "format": "{}",
+        "on-click": "~/.config/waybar/scripts/weather.sh toggle",
+        "signal": 8
+    },
+    "network#wifi": {
+        "format-wifi": "󰤨 {signalStrength}%",
+        "format-ethernet": "󰈀 Wired",
+        "format-disconnected": "󰤭 No Connection",
+        "format-disabled": "󰖪 WiFi Off",
+        "tooltip-format-wifi": "WiFi: {essid} ({signalStrength}%)\nIP: {ipaddr}",
+        "tooltip-format-ethernet": "Ethernet: {ifname}\nIP: {ipaddr}",
+        "tooltip-format-disconnected": "No network connection",
+        "tooltip-format-disabled": "WiFi is disabled",
+        "on-click": "~/.config/waybar/scripts/wifi-menu.sh"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 Muted",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "hyprctl dispatch exec pwvucontrol",
+        "tooltip-format": "Current volume: {volume}%"
+    },
+
+    "custom/quick-actions": {
+        "format": "",
+        "tooltip-format": "Quick Actions",
+        "on-click": "~/.config/waybar/scripts/quick-actions.sh"
+    },
+    "group/power-drawer": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 450,
+            "children-class": "tray-child",
+            "transition-left-to-right": false
+         },
+        "modules": [
+            "custom/power", // Главная кнопка-триггер
+        "network#wifi"               // Выезжающий контент
+        ]
+    },
+
+    "custom/power": {
+        "exec": "~/.config/waybar/scripts/battery-status.sh",
+        "return-type": "json",
+        "interval": 10,
+        "on-click": "~/.config/waybar/scripts/power-profile.sh"
+    }
+}
+
+
+
+
+
+
+
+
+    

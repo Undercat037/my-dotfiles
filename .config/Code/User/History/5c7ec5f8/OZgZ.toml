@@ -1,0 +1,115 @@
+[config.wallpaper]
+set = true
+command = "swww"
+arguments = [
+    "img",
+    "--transition-type", "grow",
+    "--transition-pos", "0.5,0.5",
+    "--transition-duration", "1.5",
+    "--transition-fps", "60",
+    "--transition-bezier", "0.68,-0.55,0.27,1.55",
+    "--transition-step", "60"
+]
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/components/colors.conf'
+post_hook = 'hyprctl reload'
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi-colors.rasi'
+output_path = '~/.config/rofi/colors.rasi'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/waybar/colors.css'
+
+[templates.wlogout]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/wlogout/colors.css'
+
+[templates.clipse]
+input_path = '~/.config/matugen/templates/clipse-theme.json'
+output_path = '~/.config/clipse/custom_theme.json'
+
+[templates.fcitx5]
+input_path = '~/.config/matugen/templates/fcitx5-theme.conf'
+output_path = '~/.local/share/fcitx5/themes/material-you/theme.conf'
+post_hook = 'killall fcitx5; fcitx5 -d &'
+
+[templates.gtk3-colors]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+
+[templates.gtk4-colors]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-4.0/gtk.css'
+post_hook = 'bash -c "gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark && gsettings set org.gnome.desktop.interface icon-theme Numix-Circle-Light && sleep 0.1 && gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark && gsettings set org.gnome.desktop.interface color-scheme prefer-dark && killall xdg-desktop-portal-gtk 2>/dev/null; xsettingsd-restart 2>/dev/null || true"'
+
+[templates.kdeglobals]
+input_path = '~/.config/matugen/templates/kdeglobals'
+output_path = '~/.config/kdeglobals'
+
+[templates.qt5ct]
+input_path = '~/.config/matugen/templates/qtct-colors.conf'
+output_path = '~/.config/qt5ct/colors/matugen.conf'
+
+[templates.qt6ct]
+input_path = '~/.config/matugen/templates/qtct-colors.conf'
+output_path = '~/.config/qt6ct/colors/matugen.conf'
+
+[templates.kdecolors]
+input_path = "~/.config/matugen/templates/kde.colors"
+output_path = '~/.local/share/color-schemes/MaterialYou.colors'
+
+[templates.btop]
+input_path = '~/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/material-you.theme'
+post_hook = 'killall btop'
+
+[templates.vscode]
+input_path = '~/.config/matugen/templates/vscode-settings.json'
+output_path = '~/.config/VSCodium/User/vscode-colors.json'
+post_hook = '~/.config/waybar/scripts/vscode-apply-colors.sh'
+
+[templates.gimp]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/GIMP/3.0/themes/MaterialYou/colors.css'
+post_hook = 'killall -HUP xsettingsd'
+
+[templates.nwg-lock]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/nwg-dock-hyprland/colors.css'
+post_hook = 'killall nwg-dock-hyprland'
+
+[templates.nwg-drawer]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/nwg-drawer/colors.css'
+
+[templates.pywalfox]
+input_path = '~/.config/matugen/templates/pywalfox-colors.json'
+output_path = '~/.cache/wal/colors.json'
+post_hook = 'pywalfox update'
+
+[templates.swaync]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/swaync/colors.css'
+post_hook = 'swaync-client -rs'
+
+[templates.yazi]
+input_path = '~/.config/matugen/templates/yazi-theme.toml'
+output_path = '~/.config/yazi/theme.toml'
+post_hook = 'killall yazi'
+
+[templates.vesktop]
+input_path = '~/.config/matugen/templates/vesktop-system24.theme.css'
+output_path = '~/.config/vesktop/themes/system24.theme.css'
+
+[templates.neovim]
+input_path = '~/.config/matugen/templates/neovim-theme.lua'
+output_path = '~/.config/nvim/matugen.lua'
+post_hook = 'pkill -SIGUSR1 nvim'
+
+[templates.cava]
+input_path = '~/.config/matugen/templates/color.css'
+output_path = '~/.config/cava/color.css'

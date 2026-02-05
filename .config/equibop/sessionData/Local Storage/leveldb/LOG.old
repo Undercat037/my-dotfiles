@@ -1,0 +1,6 @@
+2025/12/23-03:07:36.325 1887c Reusing MANIFEST /home/deltacat/.config/equibop/sessionData/Local Storage/leveldb/MANIFEST-000001
+2025/12/23-03:07:36.332 1887c Recovering log #72
+2025/12/23-03:07:36.332 1887c Reusing old log /home/deltacat/.config/equibop/sessionData/Local Storage/leveldb/000072.log 
+2025/12/23-03:09:36.672 18841 Level-0 table #76: started
+2025/12/23-03:09:36.676 18841 Level-0 table #76: 27032 bytes OK
+2025/12/23-03:09:36.678 18841 Delete type=0 #72

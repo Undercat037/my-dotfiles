@@ -1,0 +1,598 @@
+@import "colors.css";
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(44, 40, 47, 0.18);
+    color: @on_surface;
+}
+
+/* ============================================
+   LEFT SIDE MODULES
+   Color pattern: secondary → tertiary → secondary → tertiary → secondary
+   (cpu → memory-gpu → network → temp → disk)
+   ============================================ */
+
+#custom-launcher {
+    background: @surface_container_high;
+    color: @primary;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 4px;
+    border: 2px solid @surface_container_high;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+#custom-launcher:hover {
+    background: @primary;
+    color: @surface_container_high;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 4px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+
+/* Shared base styles for left modules */
+
+#custom-memory-gpu,
+#network,
+#temperature,
+#custom-disk,
+#custom-disk-root {
+    background: @surface_container_high;
+    color: @on_surface;
+    padding: 5px 12px;
+    margin: 5px 2px;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+
+#custom-memory-gpu:hover,
+#network:hover,
+#temperature:hover,
+#custom-disk:hover,
+#custom-disk-root:hover {
+    background: @surface_container_high;
+    color: @on_surface;
+    padding: 5px 12px;
+    margin: 5px 2px;
+    border-radius: 18px;
+}
+
+/* Alternating colors - Pattern: secondary, tertiary */
+
+
+#custom-memory-gpu {
+    color: @primary;
+    transition: all 0.3s ease;
+}
+
+#custom-memory-gpu:hover {
+    color: @primary;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+#network {
+    color: @primary;
+    transition: all 0.3s ease;
+}
+
+#network:hover {
+    color: @primary;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+#temperature {
+    color: @primary;
+    transition: all 0.3s ease;
+}
+
+#temperature:hover {
+    color: @primary;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+#custom-disk {
+    color: @primary;
+    transition: all 0.3s ease;
+}
+
+#custom-disk:hover {
+    color: @primary;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+#custom-disk-root {
+    color: @primary;
+    transition: all 0.3s ease;
+}
+
+#custom-disk-root:hover {
+    color: @primary;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+
+#custom-wallpaper {
+    background: @surface_container_high;
+    color: @primary;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+#custom-wallpaper:hover {
+    background: @primary;
+    color: @surface_container_high;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+
+/* ============================================
+   CENTER MODULES
+   ============================================ */
+
+#workspaces {
+    background: transparent;
+    margin: 5px;
+}
+
+#workspaces button {
+    background: @surface_container_high;
+    color: @outline;                  /* базовый тусклый цвет (для пустых по умолчанию) */
+    padding: 5px 3px;
+    margin: 0 2px;
+    border-radius: 18px;
+    border: none;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+/* Ховер для всех кнопок (общий) */
+#workspaces button:hover {
+    background: @surface_container_highest;
+    color: @on_surface;
+    font-weight: 700;
+    padding: 5px 12px;                 /* увеличение при наводке */
+}
+
+/* Пустые воркспейсы (нет окон и не активный) — тусклые */
+#workspaces button:not(.occupied):not(.focused) {
+    color: alpha(@outline, 0.5);
+    opacity: 0.6;
+    font-weight: 400;
+}
+
+/* Ховер на пустых — чуть ярче, но не как occupied */
+#workspaces button:not(.occupied):not(.focused):hover {
+    opacity: 0.8;
+    color: @on_surface;
+}
+
+/* Воркспейсы с окнами (occupied, но не активный) — яркие, нормальный вид */
+#workspaces button.occupied:not(.focused) {
+    color: @on_surface;               /* яркий текст */
+    font-weight: 600;                 ous/* чуть жирнее для отличия */
+    opacity: 1.0;
+}
+
+/* Активный воркспейс (focused) — твой оригинальный стиль с бордером */
+#workspaces button.focused {
+    background: @surface_container_high;
+    color: @primary;
+    padding: 5px 10px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+    font-weight: 700;
+    opacity: 1.0;
+}
+
+/* Ховер на активном — инвертируем цвета (как в твоём оригинале) */
+#workspaces button.focused:hover {
+    background: @primary;
+    color: @on_primary;
+},
+
+#custom-notification {
+    background: @surface_container_high;
+    color: @primary;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+#custom-notification:hover {
+    background: @primary;
+    color: @surface_container_high;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+
+
+
+/* ============================================
+   RIGHT SIDE MODULES
+   Color pattern: secondary → tertiary → secondary → tertiary → secondary
+   (ime → clock → weather → pulseaudio → wifi)
+   ============================================ */
+
+/* Shared base styles for right modules */
+#custom-ime,
+#clock,
+#custom-weather,
+#pulseaudio,
+#network.wifi,
+#bluetooth {
+    background: @surface_container_high;
+    color: @primary;
+    padding: 5px 12px;
+    margin: 5px 2px;
+    border-radius: 18px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 9px;
+    padding-right: 12px;
+    transition: all 0.3s ease;
+}
+
+#custom-ime:hover,
+#clock:hover,
+#custom-weather:hover,
+#pulseaudio:hover,
+#network.wifi:hover,
+#bluetooth:hover {
+    background: @surface_container_high;
+    color: @primary;
+    padding: 5px 12px;
+    margin: 5px 2px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 9px;
+    padding-right: 12px;
+}
+
+/* Alternating colors - Pattern: secondary, tertiary */
+#custom-ime {
+    color: @primary;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#custom-ime:hover {
+    color: @primary;
+    font-weight: 600;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+#clock {
+    color: @primary;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#clock:hover {
+    color: @primary;
+    font-weight: 600;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+#custom-weather {
+    color: @primary;
+    transition: all 0.3s ease;
+}
+
+#custom-weather:hover {
+    color: @primary;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+#pulseaudio {
+    color: @primary;
+    transition: all 0.3s ease;
+}
+
+#pulseaudio:hover {
+    color: @primary;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+#pulseaudio.muted {
+    color: @tertiary;
+    transition: all 0.3s ease;
+}
+
+#pulseaudio.muted:hover {
+    color: @tertiary;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+#custom-quick-actions {
+    background: @surface_container_high;
+    color: @primary;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+#custom-quick-actions:hover {
+    background: @primary;
+    color: @surface_container_high;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+/* ============================================
+   SPECIAL MODULES (isolated colors)
+   ============================================ */
+
+#custom-power {
+    background: @surface_container_high;
+    color: @primary;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+#custom-power:hover {
+    background: @primary;
+    color: @surface_container_high;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+/* ============================================
+   TOOLTIPS
+   ============================================ */
+
+tooltip {
+    background: @surface_container;
+    border: 2px solid @primary;
+    border-radius: 18px;
+    color: @on_surface;
+    transition: all 0.3s ease;
+}
+
+tooltip label {
+    color: @on_surface;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+#custom-media-prev{
+    background: @surface_container_high;
+    color: @primary;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+
+}
+
+#custom-media-prev:hover{
+    background: @primary;
+    color: @surface_container_high;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+
+}
+
+#custom-media-next{
+    background: @surface_container_high;
+    color: @primary;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+#custom-media-next:hover{
+    background: @primary;
+    color: @surface_container_high;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+#mpris {
+    background: @surface_container_high;
+    color: @primary;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+#mpris:hover {
+    background: @primary;
+    color: @surface_container_high;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+#custom-play-pause {
+    background: @surface_container_high;
+    color: @primary;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 5px;
+    transition: all 0.3s ease;
+    border: 2px solid @surface_container_high;
+    border-radius: 18px;
+
+}
+
+#custom-play-pause:hover {
+    background: @primary;
+    color: @surface_container_high;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 5px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+#music-drawer {
+    background: @surface_container_high;
+    color: @primary;
+    padding: 0px 0px;
+    margin: 0px 0px 0px 0px;
+    border: 2px solid @primary;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+#music-drawer > * {
+    color: @primary;
+    padding: 1px 7px; /* Используйте padding здесь */
+    transition: all 0.3s ease;
+}
+
+#tray-drawer {
+    background: @surface_container_high;
+    color: @primary;
+    padding: 0px 0px;
+    margin: 0px 0px 0px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+#tray-drawer > * {
+    color: @primary;
+    padding: 1px 7px; /* Используйте padding здесь */
+    margin: 0px 0px 0px 0px;
+    transition: all 0.3s ease;
+}
+
+#storage-drawer {
+    background: @surface_container_high;
+    color: @primary;
+    padding: 0px 15px;
+    margin: 0px 0px 0px 0px;
+    border: 2px solid @surface_container;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+#storage-drawer:hover {
+    background: @surface_container_high;
+    color: @primary;
+    padding: 0px 15px;
+    margin: 0px 0px 0px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+#storage-drawer > * {
+    color: @primary;
+    padding: 1px 7px; /* Используйте padding здесь */
+    transition: all 0.3s ease;
+}
+
+#cpu-drawer:hover {
+    background: @surface_container_high;
+    color: @primary;
+    padding: 0px 4px;
+    margin: 0px 0px 0px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+#cpu-drawer > * {
+    color: @primary;
+    padding: 1px 7px; /* Используйте padding здесь */
+    transition: all 0.3s ease;
+}
+
+#cpu {
+    color: @primary;
+    background: @surface_container_high;
+    padding: 5px 12px;
+    margin: 5px 2px;
+    border: 2px solid @surface_container_high;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+#cpu:hover {
+    color: @primary;
+    border: 2px solid @primary;
+    border-radius: 18px;
+    padding: 5px 12px;
+    margin: 5px 2px;
+}
+
+
+#custom-debug-menu {
+    background: @surface_container_high;
+    color: @primary;
+    padding: 5px 14px;
+    margin: 5px 10px 5px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+#custom-debug-menu:hover {
+    background: @primary;
+    color: @surface_container_high;
+    padding: 5px 14px;
+    margin: 5px 10px 5px 0px;
+    border: 2px solid @primary;
+    border-radius: 18px;
+}
+
+
+
+
+

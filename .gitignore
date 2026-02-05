@@ -1,0 +1,73 @@
+# Existing rules
+.config/youtube/
+.config/vesktop/
+debug_log.txt
+*.log
+*.tmp
+*.bak
+tmp/
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.jpg
+*.png
+
+# Session files (personal dev data)
+session-*.md
+session-ses_*.md
+
+# Credentials and cookies (NEVER commit)
+yt-cookies.txt
+*-cookies.txt
+*.cookies
+cookies.txt
+*.netscape-cookies
+.env
+.env.*
+secrets.json
+*_secret.json
+*.key
+*.pem
+
+# Скомпилированные файлы
+*.zwc
+
+# Приватные данные
+.ssh/
+.gnupg/
+
+# Кеши
+*.cache
+.zsh_history
+
+# Oh-my-zsh кеши и логи
+.oh-my-zsh/cache/
+.oh-my-zsh/log/
+.oh-my-zsh/**/*.log
+
+# Личные конфиги Discord/Vesktop
+.config/vesktop/
+
+# Hyprland личное
+.config/hypr/hyprland.log
+.config/hypr/hyprland.conf.old
+
+# Kitty sessions и кеш
+.config/kitty/sessions/
+
+# Fastfetch кеш
+.config/fastfetch/cache/
+
+# Rofi истории
+.config/rofi/history/
+.config/rofi/*.rasi.bak
+
+# Временные и служебные файлы
+*.txt
+!readme.md
+!README.md
+status.txt
+.config/waybar/scripts/user-data.json
+
+.git/

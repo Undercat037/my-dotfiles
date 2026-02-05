@@ -1,0 +1,11 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "extensions.ignoreRecommendations": true,
+    "python.defaultInterpreterPath": "/bin/python",
+    "workbench.colorTheme": "Wallflow Bordered"
+}
+
+"crashReporter": {
+  "submitReports": false,
+  "enabled": false
+}

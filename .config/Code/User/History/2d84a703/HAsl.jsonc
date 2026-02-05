@@ -1,0 +1,12 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "margin-right": 100,
+    "modules-right": ["tray"],
+    
+    "tray": {
+        "icon-size": 18,
+        "spacing": 8
+    }
+}

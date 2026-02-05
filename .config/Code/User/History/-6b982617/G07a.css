@@ -1,0 +1,207 @@
+@import "colors.css";
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(84, 74, 95, 0.151);
+    color: @on_surface;
+}
+
+/* ============================================
+   LEFT SIDE MODULES
+   Color pattern: secondary → tertiary → secondary → tertiary → secondary
+   (cpu → memory-gpu → network → temp → disk)
+   ============================================ */
+
+#custom-launcher {
+    background: @primary;
+    color: @on_primary;
+    padding: 5px 10px;
+    margin: 5px 0 5px 5px;
+    border-radius: 18px;
+}
+
+/* Shared base styles for left modules */
+#cpu,
+#custom-memory-gpu,
+#network,
+#temperature,
+#custom-disk {
+    background: @surface_container_high;
+    color: @on_surface;
+    padding: 5px 12px;
+    margin: 5px 2px;
+    border-radius: 18px;
+}
+
+/* Alternating colors - Pattern: secondary, tertiary */
+#cpu {
+    color: @secondary;
+}
+
+#custom-memory-gpu {
+    color: @tertiary;
+}
+
+#network {
+    color: @secondary;
+}
+
+#temperature {
+    color: @tertiary;
+}
+
+#custom-disk {
+    color: @secondary;
+}
+
+#custom-wallpaper {
+    background: @primary;
+    color: @surface_container_high;
+    padding: 5px 10px;
+    margin: 5px 2px;
+    border-radius: 18px;
+}
+
+/* ============================================
+   CENTER MODULES
+   ============================================ */
+
+#workspaces {
+    background: transparent;
+    margin: 5px;
+}
+
+#workspaces button {
+    background: @surface_container_high;
+    color: @outline;
+    padding: 5px 3px;
+    margin: 0 2px;
+    border-radius: 18px;
+    border: none;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+#workspaces button:hover {
+    background: @surface_container_highest;
+    color: @on_surface;
+    font-weight: 700;
+    border: none;
+    box-shadow: none;
+}
+
+#workspaces button.active {
+    background: @primary;
+    padding: 5px 10px;
+    color: @on_primary;
+    font-weight: 700;
+}
+
+#workspaces button.active:hover {
+    background: @primary;
+    color: @on_primary;
+    font-weight: 700;
+}
+
+#custom-notification,
+#mpris {
+    background: @primary;
+    color: @surface_container_high;
+    padding: 5px 10px;
+    margin: 5px 0 5px 0px;
+    border-radius: 18px;
+}
+
+/* ============================================
+   RIGHT SIDE MODULES
+   Color pattern: secondary → tertiary → secondary → tertiary → secondary
+   (ime → clock → weather → pulseaudio → wifi)
+   ============================================ */
+
+/* Shared base styles for right modules */
+#custom-ime,
+#clock,
+#custom-weather,
+#pulseaudio,
+#network.wifi {
+    background: @surface_container_high;
+    color: @on_surface;
+    padding: 5px 12px;
+    margin: 5px 2px;
+    border-radius: 18px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 9px;
+    padding-right: 12px;
+}
+
+/* Alternating colors - Pattern: secondary, tertiary */
+#custom-ime {
+    color: @secondary;
+    font-weight: 600;
+}
+
+#clock {
+    color: @tertiary;
+    font-weight: 600;
+}
+
+#custom-weather {
+    color: @secondary;
+}
+
+#pulseaudio {
+    color: @tertiary;
+}
+
+#pulseaudio.muted {
+    color: @tertiary;
+}
+
+#custom-quick-actions {
+    background: @primary;
+    color: @surface_container_high;
+    padding: 5px 10px;
+    margin: 5px 0 5px 5px;
+    border-radius: 18px;
+}
+
+/* ============================================
+   SPECIAL MODULES (isolated colors)
+   ============================================ */
+
+#custom-power {
+    background: #E08290;  /* Isolated error color */
+    color: @on_error;
+    padding: 5px 12px;
+    margin: 5px 5px 5px 0px;
+    border-radius: 18px;
+}
+
+/* ============================================
+   TOOLTIPS
+   ============================================ */
+
+tooltip {
+    background: @surface_container;
+    border: 2px solid @primary;
+    border-radius: 18px;
+    color: @on_surface;
+}
+
+tooltip label {
+    color: @on_surface;
+    padding: 5px;
+}
+

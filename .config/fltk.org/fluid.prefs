@@ -1,0 +1,66 @@
+; FLTK preferences file format 1.0
+; vendor: fltk.org
+; application: fluid
+
+[.]
+
+scheme_name:base
+shell_commands_version:1
+
+[./widget_browser]
+
+
+[./main_window_pos]
+
+x:0
+y:0
+w:956
+h:1007
+visible:1
+
+[./shell_commands]
+
+
+[./shell_commands/0]
+
+name:Sample Shell Command
+label:Sample Shell Command
+shortcut:524391
+command:echo "Sample Shell Command"
+flags:3
+
+[./Layouts]
+
+current_suite:FLTK
+current_preset:0
+
+[./widgetbin_pos]
+
+x:0
+y:0
+w:600
+h:102
+visible:1
+
+[./codeview]
+
+autorefresh:1
+autoposition:1
+tab:0
+code_choice:2
+
+[./codeview_pos]
+
+x:320
+y:120
+w:550
+h:500
+visible:0
+
+[./shell_run_Window_pos]
+
+x:0
+y:0
+w:555
+h:430
+visible:0

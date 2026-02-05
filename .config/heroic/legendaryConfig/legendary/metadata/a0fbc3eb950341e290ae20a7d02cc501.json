@@ -1,0 +1,94 @@
+{
+  "app_name": "a0fbc3eb950341e290ae20a7d02cc501",
+  "app_title": "Five Nights at Freddy's: Into the Pit",
+  "asset_infos": {
+    "Windows": {
+      "app_name": "a0fbc3eb950341e290ae20a7d02cc501",
+      "asset_id": "a0fbc3eb950341e290ae20a7d02cc501",
+      "build_version": "1.0.0.0",
+      "catalog_item_id": "7848fc62bfb848a28b5ef5171ea23470",
+      "label_name": "Live-Windows",
+      "metadata": {
+        "installationPoolId": "0f7693eb668a4702b8ca34e61e84216a"
+      },
+      "namespace": "afa1cff319dd4f81b58006e223dd4401",
+      "sidecar_rev": 1
+    }
+  },
+  "base_urls": [],
+  "metadata": {
+    "applicationId": "",
+    "categories": [
+      {
+        "path": "games"
+      },
+      {
+        "path": "applications"
+      }
+    ],
+    "creationDate": "2024-05-24T15:52:13.340Z",
+    "customAttributes": {
+      "CloudSaveFolder": {
+        "type": "STRING",
+        "value": "{AppData}/../LocalLow/Mega Cat Studios/FNaFIntoThePit/"
+      },
+      "FolderName": {
+        "type": "STRING",
+        "value": "FiveNightsatFreddysICCsjt"
+      }
+    },
+    "description": "Five Nights at Freddy's: Into the Pit",
+    "developer": "Mega Cat Studios",
+    "developerId": "o-jmkhu825d5bwbxx98t57yyruf9n799",
+    "endOfSupport": false,
+    "entitlementName": "7848fc62bfb848a28b5ef5171ea23470",
+    "entitlementType": "EXECUTABLE",
+    "id": "7848fc62bfb848a28b5ef5171ea23470",
+    "itemType": "DURABLE",
+    "keyImages": [
+      {
+        "alt": "Five Nights at Freddy's: Into the Pit Offer",
+        "height": 1440,
+        "md5": "bdb82b008bfc7a9fa7eda1c808447b06",
+        "size": 2604810,
+        "type": "DieselGameBox",
+        "uploadedDate": "2025-11-05T20:59:46.264Z",
+        "url": "https://cdn1.epicgames.com/spt-assets/5c65df08b03a43eb8be026116ef8e979/five-nights-at-freddys-into-the-pit-1tlce.png",
+        "width": 2560
+      },
+      {
+        "alt": "Download Five Nights at Freddy's: Into the Pit Offer",
+        "height": 1600,
+        "md5": "2742c4158b0a6f0bc436426f078f9398",
+        "size": 2337847,
+        "type": "DieselGameBoxTall",
+        "uploadedDate": "2025-07-03T17:48:48.725Z",
+        "url": "https://cdn1.epicgames.com/spt-assets/5c65df08b03a43eb8be026116ef8e979/five-nights-at-freddys-into-the-pit-pqsoz.png",
+        "width": 1200
+      }
+    ],
+    "lastModifiedDate": "2025-11-07T20:03:19.869Z",
+    "mainGameItemList": [],
+    "namespace": "afa1cff319dd4f81b58006e223dd4401",
+    "releaseInfo": [
+      {
+        "appId": "a0fbc3eb950341e290ae20a7d02cc501",
+        "id": "15ac46d5e8974bd4835accf7076865ed",
+        "platform": [
+          "Win32",
+          "Windows"
+        ]
+      }
+    ],
+    "requiresSecureAccount": false,
+    "status": "ACTIVE",
+    "title": "Five Nights at Freddy's: Into the Pit",
+    "unsearchable": false
+  },
+  "sidecar": {
+    "config": {
+      "deploymentId": "f099a042b4b447918261b249851364d7"
+    },
+    "rev": 1
+  }
+}

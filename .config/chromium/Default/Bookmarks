@@ -1,0 +1,68 @@
+{
+   "checksum": "196b1261291fd64ddd66b102b4d79830",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13102446837000000",
+            "date_last_used": "0",
+            "guid": "856f8869-9fa1-47d6-823b-7a02b38dd68a",
+            "id": "5",
+            "name": "Garuda Linux",
+            "type": "url",
+            "url": "https://garudalinux.org/"
+         }, {
+            "date_added": "13102446886000000",
+            "date_last_used": "0",
+            "guid": "98d458df-8190-41c3-8e3a-2c311904d7d2",
+            "id": "6",
+            "name": "Wiki",
+            "type": "url",
+            "url": "https://wiki.garudalinux.org/"
+         }, {
+            "date_added": "13102446920000000",
+            "date_last_used": "0",
+            "guid": "d41918ed-afdc-41fa-be15-54cebfa810eb",
+            "id": "7",
+            "name": "Garuda Forum",
+            "type": "url",
+            "url": "https://forum.garudalinux.org/"
+         }, {
+            "date_added": "13102446920000000",
+            "date_last_used": "0",
+            "guid": "a96c6c33-1ed6-4f79-804c-dd7ff0d926a1",
+            "id": "8",
+            "name": "Uptimes",
+            "type": "url",
+            "url": "https://status.garudalinux.org/"
+         } ],
+         "date_added": "13412983532990511",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Панель закладок",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13412983532990511",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Інші закладки",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13412983532990511",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Закладки на мобільному",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

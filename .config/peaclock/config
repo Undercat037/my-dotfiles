@@ -1,0 +1,8 @@
+# Установка режима истинного цвета (HEX)
+set mode truecolor
+
+# Настройка стилей через команду style
+style active-bg #ffb781
+style active-fg #ffb781
+style date #e4bfa7
+style colon-fg #ffb781

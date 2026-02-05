@@ -1,0 +1,11 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export MANPAGER:sh\x20\x2dc\x20\x27col\x20\x2dbx\x20\x7c\x20bat\x20\x2dl\x20man\x20\x2dp\x27
+SETUVAR --export MANROFFOPT:\x2dc
+SETUVAR __done_min_cmd_duration:10000
+SETUVAR __done_notification_urgency_level:low
+SETUVAR __fish_initialized:4300
+SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
+SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:\x7e/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_list\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e\x7e/\x2econfig/fish/functions/nvm\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e\x7e/\x2econfig/fish/completions/nvm\x2efish
+SETUVAR _fisher_plugins:edc/bass\x1ejorgebucaran/nvm\x2efish
+SETUVAR _fisher_upgraded_to_4_4:\x1d

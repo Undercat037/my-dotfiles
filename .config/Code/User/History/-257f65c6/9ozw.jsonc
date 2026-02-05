@@ -1,0 +1,130 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "file",
+    "source": "~/.config/fastfetch/arch.txt",
+    "color": {
+      "1": "blue"
+    }
+  },
+  "display": {
+    "separator": " "
+  },
+  "modules": [
+    {
+      "type": "title",
+      "key": "\u001b[1;34m󰇄 Computer:\u001b[0m",
+      "format": "\u001b[0m{user-name}@{host-name}"
+    },
+    {
+      "type": "custom",
+      "format": ""
+    },
+    {
+      "type": "custom",
+      "format": "╭───────────── \u001b[1;34m* Systems *\u001b[0m ──────────────╮"
+    },
+    {
+      "type": "os",
+      "key": "\u001b[0m│ \u001b[1;34m󰣇 OS:\u001b[0m"
+    },
+    {
+      "type": "kernel",
+      "key": "\u001b[0m│ \u001b[1;34m󰌽 Kernel:\u001b[0m"
+    },
+    {
+      "type": "uptime",
+      "key": "\u001b[0m│ \u001b[1;34m󰥔 Uptime:\u001b[0m"
+    },
+    {
+    "type": "command",
+    "key": "   OS Age ",
+    "keyColor": "31",
+    "text": "birth_install=$(stat -c %W /); current=$(date +%s); days_difference=$(( (current - birth_install) / 86400 )); echo $days_difference days"
+    },
+    {
+    "type": "command",
+    "key": "  󰃰 OS Birthday ",
+    "keyColor": "31",
+    "text": "birth_install=$(stat -c %W /); echo $(date -d @$birth_install '+%d %b %Y')"
+    },
+    {
+      "type": "packages",
+      "key": "\u001b[0m│ \u001b[1;34m󰏖 Packages:\u001b[0m",
+    },
+    {
+      "type": "shell",
+      "key": "\u001b[0m│ \u001b[1;34m Shell:\u001b[0m"
+    },
+    {
+      "type": "custom",
+      "format": "╰────────\u001b[30m─●─\u001b[31m─●─\u001b[32m─●─\u001b[33m─●─\u001b[34m─●─\u001b[35m─●─\u001b[36m─●─\u001b[37m─●─\u001b[0m────────╯"
+    },
+    {
+      "type": "custom",
+      "format": ""
+    },
+    {
+      "type": "custom",
+      "format": "╭──────────── \u001b[1;34m* Displays *\u001b[0m ──────────────╮"
+    },
+    {
+      "type": "display",
+      "key": "\u001b[0m│ \u001b[1;34m󰍹 Resolution:\u001b[0m",
+      "format": "{1}x{2} @ {3}Hz"
+    },
+    {
+      "type": "de",
+      "key": "\u001b[0m│ \u001b[1;34m󰧨 DE:\u001b[0m"
+    },
+    {
+      "type": "wm",
+      "key": "\u001b[0m│ \u001b[1;34m WM:\u001b[0m"
+    },
+    {
+      "type": "terminal",
+      "key": "\u001b[0m│ \u001b[1;34m Terminal:\u001b[0m"
+    },
+    {
+      "type": "terminalfont",
+      "key": "\u001b[0m│ \u001b[1;34m Font:\u001b[0m"
+    },
+    {
+      "type": "custom",
+      "format": "╰────────\u001b[30m─●─\u001b[31m─●─\u001b[32m─●─\u001b[33m─●─\u001b[34m─●─\u001b[35m─●─\u001b[36m─●─\u001b[37m─●─\u001b[0m────────╯"
+    },
+    {
+      "type": "custom",
+      "format": ""
+    },
+    {
+      "type": "custom",
+      "format": "╭──────────── \u001b[1;34m* Hardware *\u001b[0m ──────────────╮"
+    },
+    {
+      "type": "host",
+      "key": "\u001b[0m│ \u001b[1;34m󰌢 Host:\u001b[0m",
+      "format": "{2}"
+    },
+    {
+      "type": "cpu",
+      "key": "\u001b[0m│ \u001b[1;34m󰻠 CPU:\u001b[0m"
+    },
+    {
+      "type": "gpu",
+      "key": "\u001b[0m│ \u001b[1;34m󰢮 GPU:\u001b[0m"
+    },
+    {
+      "type": "memory",
+      "key": "\u001b[0m│ \u001b[1;34m󰍛 Memory:\u001b[0m"
+    },
+    {
+      "type": "disk",
+      "key": "\u001b[0m│ \u001b[1;34m󰋊 Disk:\u001b[0m"
+    },
+    {
+      "type": "custom",
+      "format": "╰────────\u001b[30m─●─\u001b[31m─●─\u001b[32m─●─\u001b[33m─●─\u001b[34m─●─\u001b[35m─●─\u001b[36m─●─\u001b[37m─●─\u001b[0m────────╯"
+    }
+  ]
+}

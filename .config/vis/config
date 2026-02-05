@@ -1,0 +1,5 @@
+#visualizer.mode=lorentz
+visualizer.mode=ellipse
+visualizer.fps=60
+# Чтобы линии были тоньше и изящнее
+visualizer.lorentz.character=·

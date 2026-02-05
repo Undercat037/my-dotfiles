@@ -1,0 +1,15 @@
+{"timestamp":123242,"category":"session_restore","name":"backup_can_be_loaded_session_file","extra":{"loadfail_reason":"N/A","can_load":"true","glean_timestamp":"1770292031117","path_key":"clean"}}
+{"timestamp":123242,"category":"session_restore","name":"backup_can_be_loaded_session_file","extra":{"loadfail_reason":"N/A","path_key":"clean","glean_timestamp":"1770292031117","can_load":"true"}}
+{"timestamp":123243,"category":"session_restore","name":"shutdown_success_session_startup","extra":{"shutdown_reason":"N/A","shutdown_ok":"false","glean_timestamp":"1770292031118"}}
+{"timestamp":123476,"category":"webcompatreporting","name":"reason_dropdown","extra":{"setting":"required","glean_timestamp":"1770292031351"}}
+{"timestamp":123622,"category":"nimbus_events","name":"startup_database_consistency","extra":{"trigger":"startup","glean_timestamp":"1770292031497","total_store_count":"33","primary":"database","store_active_count":"28","db_active_count":"28","total_db_count":"33"}}
+{"timestamp":123678,"category":"jsonfile","name":"load_autofillprofiles","extra":{"glean_timestamp":"1770292031553","value":"error_notfounderror"}}
+{"timestamp":123738,"category":"doh","name":"state_rollback","extra":{"value":"null","glean_timestamp":"1770292031613"}}
+{"timestamp":123986,"category":"normandy","name":"enroll_failed_nimbus_experiment","extra":{"value":"ai-chatbot-page-summarization-mvp-v2-copy","glean_timestamp":"1770292031861","reason":"feature-conflict"}}
+{"timestamp":123986,"category":"nimbus_events","name":"enroll_failed","extra":{"experiment":"ai-chatbot-page-summarization-mvp-v2-copy","reason":"feature-conflict","glean_timestamp":"1770292031861"}}
+{"timestamp":123986,"category":"nimbus_events","name":"is_ready","extra":{"glean_timestamp":"1770292031861"}}
+{"timestamp":123995,"category":"containers","name":"container_profile_loaded","extra":{"containers":"4","glean_timestamp":"1770292031870"}}
+{"timestamp":124035,"category":"jsonfile","name":"load_logins","extra":{"value":"error_notfounderror","glean_timestamp":"1770292031910"}}
+{"timestamp":124039,"category":"upgrade_dialog","name":"trigger_reason","extra":{"value":"not-major","glean_timestamp":"1770292031914"}}
+{"timestamp":124484,"category":"urlbar","name":"abandonment","extra":{"abandonment_type":"blur","glean_timestamp":"1770292032359","search_engine_default_id":"google-b-d","n_results":"1","sap":"urlbar_newtab","n_chars":"0","actions":"none","available_semantic_sources":"none","interaction":"typed","search_mode":"","n_words":"0","groups":"heuristic","results":"tip_onboard"}}
+{"timestamp":124635,"category":"doh","name":"state_shutdown","extra":{"glean_timestamp":"1770292032510","value":"null"}}

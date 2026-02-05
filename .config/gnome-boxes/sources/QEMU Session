@@ -1,0 +1,21 @@
+[source]
+name=QEMU Session
+type=libvirt
+uri=qemu+unix:///session
+save-on-quit=true
+
+[display 7b503774-2249-4a23-ab07-527d1e4b1507]
+last-seen-name=Arch Linux
+uuid=7b503774-2249-4a23-ab07-527d1e4b1507
+acceleration-3d=false
+run-in-bg=true
+access-last-time=1767696181720440
+access-ntimes=1
+
+[display 97e030f7-4bd5-48cc-b8a3-9751bc254230]
+last-seen-name=Void Linux glibc
+uuid=97e030f7-4bd5-48cc-b8a3-9751bc254230
+acceleration-3d=false
+run-in-bg=true
+access-last-time=1769604322651551
+access-ntimes=2

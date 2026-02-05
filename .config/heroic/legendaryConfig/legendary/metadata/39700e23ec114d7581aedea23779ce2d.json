@@ -1,0 +1,95 @@
+{
+  "app_name": "39700e23ec114d7581aedea23779ce2d",
+  "app_title": "Bendy and the Ink Machine",
+  "asset_infos": {
+    "Windows": {
+      "app_name": "39700e23ec114d7581aedea23779ce2d",
+      "asset_id": "39700e23ec114d7581aedea23779ce2d",
+      "build_version": "1.5.1.6",
+      "catalog_item_id": "3a671a15148746999d9f5a010f0ba4a3",
+      "label_name": "Live-Windows",
+      "metadata": {
+        "installationPoolId": "8964beef505449a998561f0fa7b66e7d",
+        "update_type": "PATCH"
+      },
+      "namespace": "4ebf21b7761e40cdb180d0604127e4a6",
+      "sidecar_rev": 1
+    }
+  },
+  "base_urls": [],
+  "metadata": {
+    "applicationId": "fghi4567meFt4qs9mOIewL0Avl1Bi38R",
+    "categories": [
+      {
+        "path": "games"
+      },
+      {
+        "path": "applications"
+      }
+    ],
+    "creationDate": "2024-11-16T00:40:23.413Z",
+    "customAttributes": {
+      "CloudSaveFolder": {
+        "type": "STRING",
+        "value": "{AppData}/../LocalLow/Joey Drew Studios/Bendy and the Ink Machine/Saves/"
+      },
+      "FolderName": {
+        "type": "STRING",
+        "value": "BendyandtheInkMachine"
+      }
+    },
+    "description": "Bendy and the Ink Machine\u00ae \u2014 \u043c\u043e\u0442\u043e\u0440\u043e\u0448\u043d\u0438\u0439 \u0431\u043e\u0439\u043e\u0432\u0438\u043a-\u0433\u043e\u043b\u043e\u0432\u043e\u043b\u043e\u043c\u043a\u0430 \u0432\u0456\u0434 \u043f\u0435\u0440\u0448\u043e\u0457 \u043e\u0441\u043e\u0431\u0438, \u044f\u043a\u0438\u0439 \u043d\u0430\u0437\u0430\u0432\u0436\u0434\u0438 \u0437\u0440\u0443\u0439\u043d\u0443\u0454 \u0432\u0430\u0448\u0435 \u0434\u0438\u0442\u044f\u0447\u0435 \u0437\u0430\u0445\u043e\u043f\u043b\u0435\u043d\u043d\u044f \u043c\u0443\u043b\u044c\u0442\u0444\u0456\u043b\u044c\u043c\u0430\u043c\u0438.",
+    "developer": "Joey Drew Studios Inc.",
+    "developerId": "o-9byb38tk97j39dfnl2z7w5hr4kt24v",
+    "endOfSupport": false,
+    "entitlementName": "3a671a15148746999d9f5a010f0ba4a3",
+    "entitlementType": "EXECUTABLE",
+    "id": "3a671a15148746999d9f5a010f0ba4a3",
+    "itemType": "DURABLE",
+    "keyImages": [
+      {
+        "alt": "Bendy and the Ink Machine Offer",
+        "height": 1440,
+        "md5": "4d90a1f6766f48fdaa2d3142eeb25098",
+        "size": 3733463,
+        "type": "DieselGameBox",
+        "uploadedDate": "2025-06-19T10:23:07.788Z",
+        "url": "https://cdn1.epicgames.com/spt-assets/0b1283e5bfa64ad48f3862b79abc20b9/bendy-and-the-ink-machine-1tw1e.png",
+        "width": 2560
+      },
+      {
+        "alt": "Download Bendy and the Ink Machine Offer",
+        "height": 1600,
+        "md5": "5ba7caf64c6cd61ad4b42e607b9d085f",
+        "size": 2102916,
+        "type": "DieselGameBoxTall",
+        "uploadedDate": "2025-06-19T10:23:11.720Z",
+        "url": "https://cdn1.epicgames.com/spt-assets/0b1283e5bfa64ad48f3862b79abc20b9/bendy-and-the-ink-machine-b7j9w.png",
+        "width": 1200
+      }
+    ],
+    "lastModifiedDate": "2025-08-13T08:36:35.153Z",
+    "longDescription": "<!--textBlock-->\n<!--title-->\n# \u041c\u0440\u0456\u0457 \u043e\u0436\u0438\u0432\u0430\u044e\u0442\u044c.\n<!--text-->\nBendy and the Ink Machine\u00ae \u2014 \u043c\u043e\u0442\u043e\u0440\u043e\u0448\u043d\u0438\u0439 \u0431\u043e\u0439\u043e\u0432\u0438\u043a-\u0433\u043e\u043b\u043e\u0432\u043e\u043b\u043e\u043c\u043a\u0430 \u0432\u0456\u0434 \u043f\u0435\u0440\u0448\u043e\u0457 \u043e\u0441\u043e\u0431\u0438, \u044f\u043a\u0438\u0439 \u043f\u043e\u0447\u0438\u043d\u0430\u0454\u0442\u044c\u0441\u044f \u0432 \u0447\u0430\u0441\u0438 \u0437\u0430\u0440\u043e\u0434\u0436\u0435\u043d\u043d\u044f \u0430\u043d\u0456\u043c\u0430\u0446\u0456\u0457, \u0430 \u0437\u0430\u043a\u0456\u043d\u0447\u0443\u0454\u0442\u044c\u0441\u044f \u0432 \u0434\u0443\u0436\u0435 \u0442\u0435\u043c\u043d\u043e\u043c\u0443 \u043c\u0430\u0439\u0431\u0443\u0442\u043d\u044c\u043e\u043c\u0443.\n\n\u0413\u0440\u0430\u0439\u0442\u0435 \u0437\u0430 \u0413\u0435\u043d\u0440\u0456, \u044f\u043a\u0438\u0439 \u0432\u0456\u0434\u0432\u0456\u0434\u0443\u0454 \u0434\u0435\u043c\u043e\u043d\u0456\u0432 \u0441\u0432\u043e\u0433\u043e \u043c\u0438\u043d\u0443\u043b\u043e\u0433\u043e, \u0434\u043e\u0441\u043b\u0456\u0434\u0436\u0443\u044e\u0447\u0438 \u043f\u043e\u043a\u0438\u043d\u0443\u0442\u0443 \u043c\u0430\u0439\u0441\u0442\u0435\u0440\u043d\u044e \u0430\u043d\u0456\u043c\u0430\u0442\u043e\u0440\u0456\u0432 \u0443 Joey Drew Studios. Bendy and the Ink Machine\u00ae \u043d\u0430\u043b\u044f\u043a\u0430\u0454 \u0432\u0430\u0441\u2026 \u0456 \u0437\u0456\u043f\u0441\u0443\u0454 \u0434\u0438\u0442\u0438\u043d\u0441\u0442\u0432\u043e \u0441\u0432\u043e\u0457\u043c\u0438 \u043d\u0435\u0441\u043f\u043e\u0434\u0456\u0432\u0430\u043d\u0438\u043c\u0438 \u0432\u0438\u0432\u0435\u0440\u0442\u0430\u043c\u0438 \u0439 \u043f\u043e\u0432\u043e\u0440\u043e\u0442\u0430\u043c\u0438 \u043d\u0430 \u043a\u043e\u0436\u043d\u043e\u043c\u0443 \u043a\u0440\u043e\u0446\u0456.\n\n\u0422\u0435\u043f\u0435\u0440 \u0432\u0438 \u0441\u043f\u0440\u0438\u0439\u043c\u0430\u0442\u0438\u043c\u0435\u0442\u0435 \u043c\u0443\u043b\u044c\u0442\u0444\u0456\u043b\u044c\u043c\u0438 \u0433\u0435\u0442\u044c \u0456\u043d\u0430\u043a\u0448\u0435.\n",
+    "mainGameItemList": [],
+    "namespace": "4ebf21b7761e40cdb180d0604127e4a6",
+    "releaseInfo": [
+      {
+        "appId": "39700e23ec114d7581aedea23779ce2d",
+        "id": "6f7a8e48f13e4907a352c3b5e012176b",
+        "platform": [
+          "Windows"
+        ]
+      }
+    ],
+    "requiresSecureAccount": false,
+    "status": "ACTIVE",
+    "title": "Bendy and the Ink Machine",
+    "unsearchable": false
+  },
+  "sidecar": {
+    "config": {
+      "deploymentId": "ca986c30c62a4bff9d7c6150fe1dcb79"
+    },
+    "rev": 1
+  }
+}

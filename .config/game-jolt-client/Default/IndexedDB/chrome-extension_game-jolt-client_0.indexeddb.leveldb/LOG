@@ -1,0 +1,20 @@
+2025/12/20-02:44:44.831 106f6 Creating DB /home/deltacat/.config/game-jolt-client/Default/IndexedDB/chrome-extension_game-jolt-client_0.indexeddb.leveldb since it was missing.
+2025/12/20-02:44:44.836 106f6 Reusing MANIFEST /home/deltacat/.config/game-jolt-client/Default/IndexedDB/chrome-extension_game-jolt-client_0.indexeddb.leveldb/MANIFEST-000001
+2025/12/20-02:44:44.893 106f9 Level-0 table #5: started
+2025/12/20-02:44:44.896 106f9 Level-0 table #5: 1235 bytes OK
+2025/12/20-02:44:44.899 106f9 Delete type=0 #3
+2025/12/20-02:44:44.899 106f9 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/12/20-02:44:45.286 106f6 Level-0 table #7: started
+2025/12/20-02:44:45.288 106f6 Level-0 table #7: 702 bytes OK
+2025/12/20-02:44:45.292 106f6 Delete type=0 #4
+2025/12/20-02:44:45.292 106f6 Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/12/20-02:44:57.992 106f6 Level-0 table #9: started
+2025/12/20-02:44:57.994 106f6 Level-0 table #9: 9966 bytes OK
+2025/12/20-02:44:57.997 106f6 Delete type=0 #6
+2025/12/20-02:44:57.998 106f6 Manual compaction at level-0 from '\x00\x06\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x07\x00\x00\x00' @ 0 : 0; will stop at '\x00\x06\x00\x00\x05' @ 369 : 1
+2025/12/20-02:44:57.998 106f6 Compacting 1@0 + 1@1 files
+2025/12/20-02:44:58.000 106f6 Generated table #10@0: 146 keys, 4269 bytes
+2025/12/20-02:44:58.000 106f6 Compacted 1@0 + 1@1 files => 4269 bytes
+2025/12/20-02:44:58.005 106f6 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/12/20-02:44:58.005 106f6 Delete type=2 #9
+2025/12/20-02:44:58.005 106f6 Manual compaction at level-0 from '\x00\x06\x00\x00\x05' @ 369 : 1 .. '\x00\x07\x00\x00\x00' @ 0 : 0; will stop at (end)

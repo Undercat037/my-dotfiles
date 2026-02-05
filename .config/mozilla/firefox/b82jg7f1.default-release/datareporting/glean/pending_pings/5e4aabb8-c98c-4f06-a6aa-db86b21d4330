@@ -1,0 +1,3 @@
+/submit/firefox-desktop/context-id-deletion-request/1/5e4aabb8-c98c-4f06-a6aa-db86b21d4330
+{"metrics":{"uuid":{"contextual_services.context_id":"42e81203-3f0d-44e3-84dd-085b38dee840"},"string_list":{"glean.ping.uploader_capabilities":["ohttp"]}}}
+{"headers":{},"body_has_info_sections":false,"ping_name":"context-id-deletion-request","uploader_capabilities":["ohttp"]}

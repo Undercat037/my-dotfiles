@@ -1,0 +1,8 @@
+{
+  "wallpaperFolder": "/home/deltacat/Pictures/wallpapers",
+  "posthookScript": "",
+  "exportThemeLocation": "/home/deltacat/.config/tinte/themes",
+  "applyThemeLocation": "/home/deltacat/.config/themes/tinte",
+  "colorBackend": "imagemagick",
+  "wallpaperBackend": null
+}

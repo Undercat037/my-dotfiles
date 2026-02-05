@@ -1,0 +1,8 @@
+# Установка режима истинного цвета (HEX)
+set mode truecolor
+
+# Настройка стилей через команду style
+style active-bg {{colors.primary.default.hex}}
+style active-fg {{colors.primary.default.hex}}
+style date {{colors.secondary.default.hex}}
+style colon-fg {{colors.primary.default.hex}}
