@@ -2,7 +2,7 @@
 # Запустить все окна сразу
 kitty --class=kitty-pipes -o background_opacity=0.55 pipes-rs &
 kitty --class=kitty-cava -o background_opacity=0.55 cava &
-kitty --class=kitty-fastfetch -o background_opacity=0.55 sh -c "fastfetch; exec zsh" &
+kitty --class=kitty-fastfetch -o background_opacity=0.55 sh -c "sleep 1;fastfetch --logo-type file --logo ~/.config/fastfetch/arch.txt; exec zsh" &
 # Дать время окнам появиться
 sleep 0.3
 # Получить размеры монитора один раз

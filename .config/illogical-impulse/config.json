@@ -91,7 +91,7 @@
             "m3tertiaryFixed": "#8ec07c",
             "m3tertiaryFixedDim": "#689d6a"
         },
-        "dockIconTheme": "",
+        "dockIconTheme": "Numix-Circle",
         "extraBackgroundTint": true,
         "fakeScreenRounding": 2,
         "favoriteThemes": [
@@ -107,15 +107,15 @@
             "inir": 1,
             "material": 1
         },
-        "iconTheme": "",
+        "iconTheme": "Numix-Circle",
         "palette": {
             "type": "auto"
         },
         "recentThemes": [
             "auto",
+            "zen-garden",
             "kanagawa-dragon",
-            "kanagawa",
-            "nightowl"
+            "kanagawa"
         ],
         "softenColors": true,
         "theme": "auto",
@@ -172,7 +172,7 @@
     },
     "apps": {
         "bluetooth": "kcmshell6 kcm_bluetooth",
-        "discord": "discord",
+        "discord": "vesktop",
         "network": "kitty -1 fish -c nmtui",
         "networkEthernet": "kcmshell6 kcm_networkmanagement",
         "taskManager": "missioncenter",
@@ -201,15 +201,15 @@
             "useAuroraStyle": false,
             "useMainWallpaper": true,
             "vignetteEnabled": false,
-            "vignetteIntensity": 0.5,
-            "vignetteRadius": 0.7,
+            "vignetteIntensity": 1,
+            "vignetteRadius": 0.75,
             "wallpaperPath": ""
         },
         "effects": {
             "blurRadius": 32,
             "blurStatic": 0,
             "dim": 0,
-            "dynamicDim": 0,
+            "dynamicDim": 5,
             "enableBlur": false,
             "videoBlurStrength": 50
         },
@@ -246,14 +246,14 @@
                 },
                 "dim": 0,
                 "enable": true,
-                "placementStrategy": "free",
+                "placementStrategy": "mostBusy",
                 "quote": {
                     "enable": true,
                     "text": "Hi Deltacat"
                 },
                 "style": "digital",
-                "x": 154.91015625,
-                "y": 623.078125
+                "x": 156.125,
+                "y": 660.38671875
             },
             "mediaControls": {
                 "enable": false,
@@ -442,7 +442,6 @@
     "enabledPanels": [
         "iiBar",
         "iiBackground",
-        "iiCheatsheet",
         "iiControlPanel",
         "iiDock",
         "iiLock",
@@ -463,7 +462,8 @@
         "iiBackdrop",
         "iiTilingOverlay",
         "iiSidebarLeft",
-        "iiOverlay"
+        "iiOverlay",
+        "iiCheatsheet"
     ],
     "familyTransitionAnimation": true,
     "gameMode": {
@@ -508,7 +508,7 @@
     },
     "light": {
         "antiFlashbang": {
-            "enable": false
+            "enable": true
         },
         "night": {
             "automatic": true,
@@ -632,10 +632,10 @@
     },
     "policies": {
         "ai": 0,
-        "weeb": 1
+        "weeb": 0
     },
     "powerProfiles": {
-        "preferredProfile": "performance",
+        "preferredProfile": "power-saver",
         "restoreOnStart": true
     },
     "regionSelector": {
@@ -772,6 +772,14 @@
                     {
                         "size": 1,
                         "type": "powerProfile"
+                    },
+                    {
+                        "size": 1,
+                        "type": "onScreenKeyboard"
+                    },
+                    {
+                        "size": 1,
+                        "type": "musicRecognition"
                     }
                 ]
             },
@@ -803,7 +811,7 @@
         },
         "translator": {
             "delay": 300,
-            "enable": true
+            "enable": false
         },
         "wallhaven": {
             "apiKey": "",
@@ -902,7 +910,7 @@
                 ]
             },
             "cookiesPath": "",
-            "enable": true,
+            "enable": false,
             "hideSyncBanner": false,
             "lastLikedSync": "",
             "liked": [

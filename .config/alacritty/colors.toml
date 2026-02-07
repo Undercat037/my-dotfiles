@@ -2,33 +2,33 @@
 # Do not edit manually - changes will be overwritten
 
 [colors.primary]
-background = '#181616'
-foreground = '#A4A49E'
+background = '#1B1D1B'
+foreground = '#B2B6B2'
 
 [colors.cursor]
-text   = '#181616'
-cursor = '#A4A49E'
+text   = '#1B1D1B'
+cursor = '#B2B6B2'
 
 [colors.selection]
-text       = '#181616'
-background = '#A4A49E'
+text       = '#1B1D1B'
+background = '#B2B6B2'
 
 [colors.normal]
-black   = '#181616'
-red     = '#BC6490'
-green   = '#64BC82'
-yellow  = '#BBC859'
-blue    = '#6494BC'
-magenta = '#AE64BC'
-cyan    = '#64BCB8'
-white   = '#A4A49E'
+black   = '#1B1D1B'
+red     = '#BC7564'
+green   = '#64BC70'
+yellow  = '#C8BE59'
+blue    = '#64A6BC'
+magenta = '#BC648D'
+cyan    = '#64BCA6'
+white   = '#B2B6B2'
 
 [colors.bright]
-black   = '#737C73'
-red     = '#D083AA'
-green   = '#83D09D'
-yellow  = '#CED97B'
-blue    = '#83ADD0'
-magenta = '#C383D0'
-cyan    = '#83D0CC'
-white   = '#C5C9C5'
+black   = '#6A756A'
+red     = '#D09283'
+green   = '#83D08E'
+yellow  = '#D9D07B'
+blue    = '#83BCD0'
+magenta = '#D083A7'
+cyan    = '#83D0BD'
+white   = '#D6DBD6'

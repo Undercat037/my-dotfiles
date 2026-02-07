@@ -1,22 +1,72 @@
-@define-color accent_color #cba6f7;
-@define-color accent_fg_color #1e1e2e;
-@define-color accent_bg_color #cba6f7;
-@define-color window_bg_color #1e1e2e;
-@define-color window_fg_color #cdd6f4;
-@define-color headerbar_bg_color #11111b;
-@define-color headerbar_fg_color #cdd6f4;
-@define-color view_bg_color #1e1e2e;
-@define-color view_fg_color #cdd6f4;
-@define-color sidebar_bg_color #1e1e2e;
-@define-color sidebar_fg_color #cdd6f4;
-@define-color sidebar_backdrop_color #1e1e2e;
+/*
+ * GTK Colors - Generated with Matugen
+ * This file is overwritten when you change wallpaper
+ */
 
-placessidebar, placessidebar list { background-color: #1e1e2e !important; color: #cdd6f4 !important; }
-placessidebar row:selected { background-color: #cba6f7 !important; color: #1e1e2e !important; }
-.nautilus-window headerbar, .nautilus-window .view { background-color: #1e1e2e !important; color: #cdd6f4 !important; }
+@define-color accent_color #b0c6ff;
+@define-color accent_fg_color #152e60;
+@define-color accent_bg_color #b0c6ff;
 
-/* Backdrop (unfocused) state */
-placessidebar:backdrop, placessidebar list:backdrop { background-color: #1e1e2e !important; color: #cdd6f4 !important; }
-.nautilus-window:backdrop headerbar, .nautilus-window:backdrop .view { background-color: #1e1e2e !important; color: #cdd6f4 !important; }
-.nautilus-window:backdrop placessidebar { background-color: #1e1e2e !important; }
-window:backdrop { background-color: #1e1e2e !important; }
+@define-color window_bg_color #121318;
+@define-color window_fg_color #e2e2e9;
+
+@define-color headerbar_bg_color #121318;
+@define-color headerbar_fg_color #e2e2e9;
+
+@define-color popover_bg_color #121318;
+@define-color popover_fg_color #e2e2e9;
+
+@define-color view_bg_color #121318;
+@define-color view_fg_color #e2e2e9;
+
+@define-color card_bg_color #121318;
+@define-color card_fg_color #e2e2e9;
+
+@define-color sidebar_bg_color @window_bg_color;
+@define-color sidebar_fg_color @window_fg_color;
+@define-color sidebar_border_color @window_bg_color;
+@define-color sidebar_backdrop_color @window_bg_color;
+
+/* Nautilus sidebar */
+.nautilus-window .sidebar,
+.nautilus-window sidebar,
+.nautilus-window placessidebar,
+.nautilus-window placessidebar list,
+placessidebar,
+placessidebar list {
+    background-color: #121318 !important;
+    color: #e2e2e9 !important;
+}
+
+placessidebar row {
+    background-color: transparent !important;
+    color: #e2e2e9 !important;
+}
+
+placessidebar row:hover {
+    background-color: alpha(#b0c6ff, 0.1) !important;
+}
+
+placessidebar row:selected,
+placessidebar row:selected:hover {
+    background-color: #b0c6ff !important;
+    color: #152e60 !important;
+}
+
+.nautilus-window headerbar {
+    background-color: #121318 !important;
+    color: #e2e2e9 !important;
+}
+
+.nautilus-window .view {
+    background-color: #121318 !important;
+    color: #e2e2e9 !important;
+}
+
+placessidebar image {
+    color: #e2e2e9 !important;
+}
+
+placessidebar row:selected image {
+    color: #152e60 !important;
+}

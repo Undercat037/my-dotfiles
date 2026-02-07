@@ -82,3 +82,15 @@ tmp/
 !README.md
 !readme.md
 !.gitignore
+
+# Бинарные файлы приложений
+.config/discord/
+.config/hydralauncher/
+.config/heroic/
+.config/**/modules/
+.config/**/CommonRedist/
+*.exe
+*.node
+*.dll
+*.so
+*.dylib

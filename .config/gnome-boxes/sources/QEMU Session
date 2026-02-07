@@ -4,18 +4,18 @@ type=libvirt
 uri=qemu+unix:///session
 save-on-quit=true
 
-[display 7b503774-2249-4a23-ab07-527d1e4b1507]
-last-seen-name=Arch Linux
-uuid=7b503774-2249-4a23-ab07-527d1e4b1507
+[display e82d398c-9464-41f4-ab3e-fe10e3effbb0]
+last-seen-name=archcraft-2026
+uuid=e82d398c-9464-41f4-ab3e-fe10e3effbb0
 acceleration-3d=false
-run-in-bg=true
-access-last-time=1767696181720440
-access-ntimes=1
+run-in-bg=false
+access-last-time=1770373640919712
+access-ntimes=2
 
-[display 97e030f7-4bd5-48cc-b8a3-9751bc254230]
-last-seen-name=Void Linux glibc
-uuid=97e030f7-4bd5-48cc-b8a3-9751bc254230
+[display 7abf89cb-067f-4c59-bd9d-12eeeb71325b]
+last-seen-name=openSUSE Tumbleweed
+uuid=7abf89cb-067f-4c59-bd9d-12eeeb71325b
 acceleration-3d=false
-run-in-bg=true
-access-last-time=1769604322651551
+run-in-bg=false
+access-last-time=1770442887595552
 access-ntimes=2

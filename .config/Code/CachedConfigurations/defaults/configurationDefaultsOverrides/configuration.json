@@ -1,1 +1,1 @@
-{"python.useEnvironmentsExtension":true,"python.locator":"native","python.analysis.findRefsInBackgroundThread":true,"chat.todoListTool.descriptionField":false,"chat.tools.terminal.outputLocation":"chat"}
+{"chat.todoListTool.descriptionField":false,"chat.tools.terminal.outputLocation":"chat","python.useEnvironmentsExtension":true,"python.locator":"native","python.analysis.findRefsInBackgroundThread":true}

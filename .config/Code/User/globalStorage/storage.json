@@ -4,12 +4,12 @@
     "telemetry.devDeviceId": "d4b63100-6865-4d2f-830a-fa787bfa0e5b",
     "backupWorkspaces": {
         "workspaces": [],
-        "folders": [],
-        "emptyWindows": [
+        "folders": [
             {
-                "backupFolder": "1770328069194"
+                "folderUri": "file:///home/deltacat/my-files"
             }
-        ]
+        ],
+        "emptyWindows": []
     },
     "windowControlHeight": 35,
     "profileAssociations": {
@@ -20,19 +20,18 @@
             "file:///home/deltacat/my-files/hypr": "__default__profile__",
             "file:///home/deltacat/my-files/%D0%9B%D0%B8%D1%87%D0%BD%D0%BE%D0%B5": "__default__profile__"
         },
-        "emptyWindows": {
-            "1770328069194": "__default__profile__"
-        }
+        "emptyWindows": {}
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/deltacat/.config/Code/Backups/1770328069194",
+            "folder": "file:///home/deltacat/my-files",
+            "backupPath": "/home/deltacat/.config/Code/Backups/7d712eeb338fb5da70d392bc1f3cf788",
             "uiState": {
                 "mode": 0,
                 "x": 0,
                 "y": 0,
-                "width": 976,
-                "height": 524
+                "width": 943,
+                "height": 1081
             }
         },
         "openedWindows": []
@@ -57,7 +56,7 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 0,
+            "sideBarWidth": 238,
             "auxiliaryBarWidth": 0,
             "statusBarHeight": 22,
             "windowBorder": false
