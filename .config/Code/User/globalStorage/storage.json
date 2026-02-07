@@ -30,8 +30,8 @@
                 "mode": 0,
                 "x": 0,
                 "y": 0,
-                "width": 943,
-                "height": 1081
+                "width": 1951,
+                "height": 1098
             }
         },
         "openedWindows": []
@@ -56,7 +56,7 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 238,
+            "sideBarWidth": 0,
             "auxiliaryBarWidth": 0,
             "statusBarHeight": 22,
             "windowBorder": false
@@ -80,7 +80,7 @@
                     "auxiliaryBarVisible": true
                 },
                 "e36a6bdeefe3db0013b103de90a2e75b": {
-                    "sideBarVisible": true,
+                    "sideBarVisible": false,
                     "auxiliaryBarVisible": false
                 }
             }
