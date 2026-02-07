@@ -49,7 +49,7 @@ tmp/
 .config/*/Service\ Worker/
 .config/*/CacheStorage/
 .config/*/sessionData/
-.config/libvirt/qemu
+.config/libvirt/
 
 # Логи приложений
 .config/hydralauncher/logs/
